@@ -1,5 +1,6 @@
 package net.ncguy.graph.scene.logic.render;
 
+import com.esotericsoftware.tablelayout.swing.Table;
 import net.ncguy.graph.scene.components.DraggableTable;
 import net.ncguy.graph.scene.logic.Node;
 
@@ -20,8 +21,8 @@ public class NodeComponent extends DraggableTable {
     Color defaultBG;
     java.util.List<PinComponent> pinComponentList;
 
-    PinComponent left;
-    PinComponent right;
+    Table left;
+    Table right;
 
     public Supplier<Integer> getXOverride;
     public Supplier<Integer> getYOverride;
@@ -30,12 +31,17 @@ public class NodeComponent extends DraggableTable {
         this.node = node;
         this.title = node.title;
         pinComponentList = new ArrayList<>();
-        pinComponentList.add(left = new PinComponent(this));
-        pinComponentList.add(right = new PinComponent(this));
+
         init();
     }
 
     public void init() {
+
+        left = new Table();
+        right = new Table();
+
+        addPins();
+
         setSize(400, 400);
         setBorder(BorderFactory.createLineBorder(Color.BLACK));
 
@@ -60,6 +66,15 @@ public class NodeComponent extends DraggableTable {
         root.addCell("").padBottom(4);
         root.addCell(right).right().padBottom(4).row();
         defaultBG = getBackground();
+    }
+
+    public void addPins() {
+        node.pinList.forEach(pin -> {
+            Table t;
+            if(pin.onLeft) t = left;
+            else t = right;
+            t.addCell(new PinComponent(this, pin)).row();
+        });
     }
 
     @Override

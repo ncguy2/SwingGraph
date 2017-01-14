@@ -25,7 +25,10 @@
         <children>
           <component id="8c41" class="javax.swing.JTree" binding="nodeTree">
             <constraints/>
-            <properties/>
+            <properties>
+              <rootVisible value="false"/>
+              <showsRootHandles value="true"/>
+            </properties>
           </component>
         </children>
       </scrollpane>

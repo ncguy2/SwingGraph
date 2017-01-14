@@ -4,7 +4,7 @@ import aurelienribon.tweenengine.Tween;
 import aurelienribon.tweenengine.TweenManager;
 import net.ncguy.graph.contextmenu.ContextMenuHost;
 import net.ncguy.graph.runtime.RuntimeReserve;
-import net.ncguy.graph.runtime.api.IRuntimeCore;
+import net.ncguy.graph.scene.RuntimeController;
 import net.ncguy.graph.scene.logic.Node;
 import net.ncguy.graph.scene.logic.SceneGraph;
 import net.ncguy.graph.scene.logic.render.SceneGraphRenderer;
@@ -15,7 +15,6 @@ import org.piccolo2d.extras.pswing.PSwingRepaintManager;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
-import java.util.Map;
 
 /**
  * Created by Guy on 24/10/2016.
@@ -61,25 +60,31 @@ public class SceneGraphForm extends JFrame {
         });
 
         JMenu runtimeMenu = new JMenu("Runtimes");
-        Map<String, IRuntimeCore> coreMap = RuntimeReserve.instance().runtimeMap;
-        if(coreMap.size() <= 0) {
-            JMenuItem item = new JMenuItem("No runtimes found");
-            item.setEnabled(false);
-            runtimeMenu.add(item);
-        }else{
-            coreMap.forEach((s, c) -> {
-                runtimeMenu.add(new AbstractAction(s) {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        System.out.printf("Switching to runtime: %s, \n" +
-                                "\tType: %s\n" +
-                                "\tHas compiler: %s\n" +
-                                "\tHas library: %s\n",
-                                s, c.type(), c.hasCompiler(), c.hasLibrary());
-                    }
-                });
-            });
-        }
+//        Map<String, IRuntimeCore> coreMap = RuntimeReserve.instance().runtimeMap;
+//        if(coreMap.size() <= 0) {
+//            JMenuItem item = new JMenuItem("No runtimes found");
+//            item.setEnabled(false);
+//            runtimeMenu.add(item);
+//        }else{
+//            coreMap.forEach((s, c) -> {
+//                runtimeMenu.add(new AbstractAction(s) {
+//                    @Override
+//                    public void actionPerformed(ActionEvent e) {
+//                        System.out.printf("Switching to runtime: %s, \n" +
+//                                "\tType: %s\n" +
+//                                "\tHas compiler: %s\n" +
+//                                "\tHas library: %s\n",
+//                                s, c.type(), c.hasCompiler(), c.hasLibrary());
+//                    }
+//                });
+//            });
+//        }
+        runtimeMenu.add(new AbstractAction("Configure runtimes") {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                RuntimeController.instance().setVisible(true);
+            }
+        });
 
         graph = new SceneGraph();
         graphRenderer = new SceneGraphRenderer(1600, 900, graph);
@@ -113,4 +118,7 @@ public class SceneGraphForm extends JFrame {
         tweenTimer.start();
     }
 
+    public SceneGraph getGraph() {
+        return graph;
+    }
 }

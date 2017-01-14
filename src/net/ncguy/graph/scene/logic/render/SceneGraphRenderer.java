@@ -72,7 +72,7 @@ public class SceneGraphRenderer extends PCanvas {
             }
         });
 
-//        generateTestNodes();
+        generateTestNodes();
         graph.addOnAddListener(this::onGraphNodeAdd);
         graph.addOnRemoveListener(this::onGraphNodeRemove);
     }
@@ -109,6 +109,15 @@ public class SceneGraphRenderer extends PCanvas {
         int numNodes = 7;
         int numEdges = 7;
         Random rand = new Random();
+
+        for(int i = 0; i < numNodes; i++) {
+            float x = rand.nextInt(width);
+            float y = rand.nextInt(height);
+            PNode wrapper = PPath.createRectangle(x, y, 20, 30);
+            wrapper.addAttribute("edges", new ArrayList<>());
+            nodeLayer.addChild(wrapper);
+//            nodeWrapperMap.put(node, wrapper);
+        }
 
         for (int i = 0; i < numEdges; i++) {
             int n1 = rand.nextInt(numNodes);

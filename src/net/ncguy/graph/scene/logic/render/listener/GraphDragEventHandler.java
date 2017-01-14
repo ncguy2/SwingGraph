@@ -29,7 +29,7 @@ public class GraphDragEventHandler extends PDragEventHandler {
 
     {
         PInputEventFilter filter = new PInputEventFilter();
-        filter.setOrMask(InputEvent.BUTTON1_DOWN_MASK | InputEvent.BUTTON2_DOWN_MASK);
+        filter.setOrMask(InputEvent.BUTTON1_MASK | InputEvent.BUTTON2_DOWN_MASK);
         setEventFilter(filter);
     }
 

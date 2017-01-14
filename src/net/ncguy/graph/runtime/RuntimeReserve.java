@@ -34,7 +34,7 @@ public class RuntimeReserve {
     public void populate() {
         // Load classes into classloader
         RuntimeCartographer.getInstance().executeProcess();
-        // Load runtime cores into reserve
+        // Load library cores into reserve
         RuntimeLoader.instance().loadRuntimes();
     }
 

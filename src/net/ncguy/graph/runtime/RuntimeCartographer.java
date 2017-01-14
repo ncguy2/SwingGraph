@@ -35,19 +35,19 @@ public class RuntimeCartographer {
     public File[] searchDirectories() {
         File dir = new File(externalDirectory);
         if(!dir.exists()) {
-            System.err.println("Specified runtime directory, \""+dir.getAbsolutePath()+"\", does not exist, creating...");
+            System.err.println("Specified library directory, \""+dir.getAbsolutePath()+"\", does not exist, creating...");
             if(!dir.mkdirs()) {
-                System.err.println("Unable to create runtime directory.");
+                System.err.println("Unable to create library directory.");
             }
             return null;
         }
         File[] files = dir.listFiles((dir1, name) -> name.toLowerCase().endsWith(".jar"));
         if(files == null) {
-            System.err.println("Unable to find external jar files inside specified runtime directory, \"" + dir.getAbsolutePath() + "\"");
+            System.err.println("Unable to find external jar files inside specified library directory, \"" + dir.getAbsolutePath() + "\"");
             return null;
         }
         if(files.length <= 0) {
-            System.err.println("No external jar files found in specified runtime directory, \"" + dir.getAbsolutePath() + "\"");
+            System.err.println("No external jar files found in specified library directory, \"" + dir.getAbsolutePath() + "\"");
             return null;
         }
         return files;

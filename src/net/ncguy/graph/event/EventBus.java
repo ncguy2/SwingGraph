@@ -63,6 +63,7 @@ public class EventBus {
     }
 
     public void post(final AbstractEvent event) {
+        System.out.println(event.getClass().getSimpleName()+" received");
         postTask(() -> {
             final Class eventType = event.getClass();
             if(eventSubscribers.containsKey(eventType)) {

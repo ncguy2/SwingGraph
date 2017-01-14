@@ -1,5 +1,7 @@
 package net.ncguy.graph.scene.logic.render;
 
+import net.ncguy.graph.scene.logic.Pin;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
@@ -10,16 +12,24 @@ import java.awt.event.MouseEvent;
  */
 public class PinComponent extends JPanel {
 
-    private NodeComponent parentNodeComponent;
+    public NodeComponent parentNodeComponent;
+    public Pin pin;
 
-    public PinComponent(NodeComponent parentNodeComponent) {
+    public PinComponent(NodeComponent parentNodeComponent, Pin pin) {
         this.parentNodeComponent = parentNodeComponent;
+        this.pin = pin;
         addMouseListener(new MouseAdapter() {
             @Override
             public void mousePressed(MouseEvent e) {
                 super.mousePressed(e);
-                System.out.println("Pin clicked");
+                // TODO initiate drag
                 e.consume();
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+                super.mouseReleased(e);
+                // TODO resolve drop
             }
         });
     }
@@ -28,4 +38,5 @@ public class PinComponent extends JPanel {
     public void paint(Graphics g) {
         g.drawOval(1, 1, getWidth()-2, getHeight()-2);
     }
+
 }
