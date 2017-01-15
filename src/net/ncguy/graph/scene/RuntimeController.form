@@ -67,12 +67,12 @@
                     <properties/>
                     <border type="none"/>
                     <children>
-                      <component id="b36e4" class="javax.swing.JButton" binding="selectBtn">
+                      <component id="b36e4" class="javax.swing.JButton" binding="compileBtn">
                         <constraints>
                           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                         </constraints>
                         <properties>
-                          <text value="Select Compiler"/>
+                          <text value="Compile"/>
                         </properties>
                       </component>
                       <grid id="a8196" binding="compilerDetails" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">

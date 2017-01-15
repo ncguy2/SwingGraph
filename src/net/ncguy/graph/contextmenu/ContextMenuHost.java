@@ -26,6 +26,7 @@ public class ContextMenuHost implements OpenContextMenuEvent.OpenContextMenuList
         getForm().setLocation((int)event.x, (int)event.y);
         getForm().setVisible(true);
         getForm().point.setLocation(event.x, event.y-getForm().getHeight());
+
         System.out.printf("Open context menu at coordinates [%s, %s]\n", event.x, event.y);
     }
 }

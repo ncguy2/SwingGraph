@@ -39,4 +39,8 @@ public class PinTransferable implements Transferable {
             return pin;
         throw new UnsupportedFlavorException(flavor);
     }
+
+    public Pin getPin() {
+        return pin;
+    }
 }

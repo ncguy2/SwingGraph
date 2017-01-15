@@ -2,7 +2,7 @@
   <artifact type="jar" name="TestRuntime:jar">
     <output-path>$PROJECT_DIR$/plugins</output-path>
     <root id="archive" name="TestRuntime.jar">
-      <element id="module-output" name="TestRuntime" />
+      <element id="module-output" name="GLSLRuntime" />
     </root>
   </artifact>
 </component>

@@ -21,15 +21,13 @@ public class CheckBoxListCellRenderer extends JCheckBox implements ListCellRende
         return this;
     }
 
-    public static class CheckListItem<T> {
+    public static class CheckListItem<T> extends ListItem<T> {
 
-        private T item;
-        private String label;
+
         private boolean isSelected = false;
 
         public CheckListItem(T item, String label) {
-            this.item = item;
-            this.label = label;
+            super(item, label);
         }
 
         public boolean isSelected() {
@@ -38,6 +36,16 @@ public class CheckBoxListCellRenderer extends JCheckBox implements ListCellRende
 
         public void setSelected(boolean isSelected) {
             this.isSelected = isSelected;
+        }
+    }
+
+    public static class ListItem<T> {
+        protected T item;
+        protected String label;
+
+        public ListItem(T item, String label) {
+            this.item = item;
+            this.label = label;
         }
 
         public T getItem() {
@@ -52,6 +60,7 @@ public class CheckBoxListCellRenderer extends JCheckBox implements ListCellRende
         public String toString() {
             return label;
         }
+
     }
 
 
