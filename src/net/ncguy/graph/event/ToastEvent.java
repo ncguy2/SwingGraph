@@ -1,12 +1,14 @@
 package net.ncguy.graph.event;
 
+import net.ncguy.graph.data.icons.Icons;
+
 /**
  * Created by Guy on 15/01/2017.
  */
 public class ToastEvent extends AbstractEvent {
 
     public String message;
-    public String imagePath;
+    public Icons.Icon icon;
     public float seconds;
 
     public ToastEvent() {
@@ -29,8 +31,8 @@ public class ToastEvent extends AbstractEvent {
         this.message = message;
     }
 
-    public ToastEvent setImagePath(String path) {
-        this.imagePath = path;
+    public ToastEvent setImagePath(Icons.Icon icon) {
+        this.icon = icon;
         return this;
     }
 

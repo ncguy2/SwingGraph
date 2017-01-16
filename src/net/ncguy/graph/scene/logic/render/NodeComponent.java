@@ -4,6 +4,7 @@ import com.esotericsoftware.tablelayout.swing.Table;
 import net.ncguy.graph.scene.components.DraggableTable;
 import net.ncguy.graph.scene.logic.Node;
 import net.ncguy.graph.scene.logic.Pin;
+import net.ncguy.graph.scene.render.SceneGraphForm;
 
 import javax.swing.*;
 import java.awt.*;
@@ -122,7 +123,10 @@ public class NodeComponent extends DraggableTable {
             @Override
             public void mousePressed(MouseEvent e) {
                 super.mousePressed(e);
-                propagateEvent(e);
+                if(SceneGraphForm.instance.isAltPressed && e.getClickCount() >= 2) {
+                    node.remove();
+                    e.consume();
+                }else propagateEvent(e);
             }
         });
 
@@ -157,7 +161,7 @@ public class NodeComponent extends DraggableTable {
     }
 
     public void addPins() {
-        node.pinList.forEach(pin -> {
+        node.getPinList().forEach(pin -> {
             Table t;
             if(pin.onLeft) t = left;
             else t = right;

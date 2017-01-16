@@ -8,11 +8,9 @@ import net.ncguy.graph.event.ToastEvent;
 import net.ncguy.graph.scene.components.ImagePanel;
 import net.ncguy.graph.scene.render.SceneGraphForm;
 
-import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.WindowEvent;
-import java.awt.image.BufferedImage;
 
 /**
  * Created by Guy on 15/01/2017.
@@ -26,12 +24,7 @@ public class ToastForm extends JFrame {
         setUndecorated(true);
         rootPanel.setBorder(BorderFactory.createSoftBevelBorder(0, Color.LIGHT_GRAY, Color.BLACK));
 
-        BufferedImage image = null;
-        try {
-            image = ImageIO.read(getClass().getResourceAsStream(e.imagePath));
-        } catch (Exception e1) {}
-
-        imagePanel.setImage(image);
+        imagePanel.setImage(e.icon.loadIcon());
 
         text.setText(e.getMessage());
 

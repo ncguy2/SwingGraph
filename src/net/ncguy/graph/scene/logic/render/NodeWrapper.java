@@ -1,6 +1,7 @@
 package net.ncguy.graph.scene.logic.render;
 
 import org.piccolo2d.PInputManager;
+import org.piccolo2d.PNode;
 import org.piccolo2d.event.PInputEvent;
 import org.piccolo2d.extras.pswing.PSwing;
 import org.piccolo2d.util.PBounds;
@@ -102,7 +103,9 @@ public class NodeWrapper extends PSwing {
     }
 
     private NodeWrapper findWrapperAtLocation(PInputEvent e, double x, double y) {
-        ListIterator it = getParent().getChildrenIterator();
+        PNode parent = getParent();
+        if(parent == null) return null;
+        ListIterator it = parent.getChildrenIterator();
         while(it.hasNext()) {
             Object obj = it.next();
             if(!(obj instanceof NodeWrapper)) continue;

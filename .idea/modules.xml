@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../SwingGraph_Runtimes/GLSLRuntime/GLSLRuntime.iml" filepath="$PROJECT_DIR$/../SwingGraph_Runtimes/GLSLRuntime/GLSLRuntime.iml" />
+      <module fileurl="file://$PROJECT_DIR$/runtimes/GLSLRuntime/GLSLRuntime.iml" filepath="$PROJECT_DIR$/runtimes/GLSLRuntime/GLSLRuntime.iml" />
       <module fileurl="file://$PROJECT_DIR$/SwingGraph.iml" filepath="$PROJECT_DIR$/SwingGraph.iml" />
     </modules>
   </component>

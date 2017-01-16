@@ -14,6 +14,7 @@ public class Pin {
     public Pin connected;
     public Color wireColour;
     public String label;
+    public int index;
 
     public Pin(Node owningNode, String label, boolean onLeft) {
         this.owningNode = owningNode;
@@ -23,7 +24,13 @@ public class Pin {
     }
 
     public void clear() {
+        if(connected != null)
+            disconnectFrom(connected);
+    }
 
+    public Node connectedNode() {
+        if(connected == null) return null;
+        return connected.owningNode;
     }
 
     public boolean canConnect(Pin other) {
