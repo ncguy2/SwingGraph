@@ -9,6 +9,8 @@ import net.ncguy.graph.runtime.RuntimeReserve;
 import net.ncguy.graph.scene.RuntimeController;
 import net.ncguy.graph.scene.SceneConfigForm;
 import net.ncguy.graph.scene.ToastForm;
+import net.ncguy.graph.scene.components.graph.GraphConfigurationPanel;
+import net.ncguy.graph.scene.components.graph.NodeConfigurationPanel;
 import net.ncguy.graph.scene.logic.SceneGraph;
 import net.ncguy.graph.scene.logic.render.SceneGraphRenderer;
 import net.ncguy.graph.tween.MutableColour;
@@ -17,6 +19,7 @@ import org.piccolo2d.PNode;
 import org.piccolo2d.extras.pswing.PSwingRepaintManager;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.*;
 import java.util.LinkedHashSet;
 import java.util.Set;
@@ -30,6 +33,9 @@ public class SceneGraphForm extends JFrame implements ToastEvent.ToastListener {
 
     SceneConfigForm configForm;
 
+    JSplitPane splitPane;
+
+    JTabbedPane configPane;
     SceneGraph graph;
     SceneGraphRenderer graphRenderer;
     Timer tweenTimer;
@@ -134,7 +140,17 @@ public class SceneGraphForm extends JFrame implements ToastEvent.ToastListener {
 
         setJMenuBar(menuBar);
 
-        getContentPane().add(graphRenderer);
+
+        configPane = new JTabbedPane();
+        configPane.add(new GraphConfigurationPanel(graph), "Graph Configuration");
+        configPane.add(new NodeConfigurationPanel(graph), "Node Configuration");
+
+        configPane.setMinimumSize(new Dimension(128, 128));
+        graphRenderer.setMinimumSize(new Dimension(128, 128));
+
+        splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, true, configPane, graphRenderer);
+
+        getContentPane().add(splitPane);
 
         initTweenManager();
     }

@@ -1,5 +1,7 @@
 package net.ncguy.graph.runtime.api;
 
+import com.esotericsoftware.tablelayout.swing.Table;
+import net.ncguy.graph.scene.logic.Node;
 import net.ncguy.graph.scene.logic.factory.NodeFactory;
 
 import java.util.List;
@@ -10,5 +12,9 @@ import java.util.List;
 public interface IRuntimeLibrary {
 
     List<NodeFactory> getNodeFactories();
+
+    default Table getConfigComponent(Node node) {
+        return null;
+    }
 
 }

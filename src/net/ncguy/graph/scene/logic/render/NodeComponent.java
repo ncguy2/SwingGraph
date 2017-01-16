@@ -1,16 +1,20 @@
 package net.ncguy.graph.scene.logic.render;
 
 import com.esotericsoftware.tablelayout.swing.Table;
+import freeseawind.ninepatch.swing.SwingNinePatch;
 import net.ncguy.graph.scene.components.DraggableTable;
+import net.ncguy.graph.scene.events.NodeSelectedEvent;
 import net.ncguy.graph.scene.logic.Node;
 import net.ncguy.graph.scene.logic.Pin;
 import net.ncguy.graph.scene.render.SceneGraphForm;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.geom.Point2D;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.function.Supplier;
 
@@ -23,6 +27,11 @@ public class NodeComponent extends DraggableTable {
     public String title;
     public Color defaultBG;
     java.util.List<PinComponent> pinComponentList;
+
+    SwingNinePatch bodyPatch;
+    SwingNinePatch titlePatch;
+    SwingNinePatch titleGlossPatch;
+    SwingNinePatch titleHighlightPatch;
 
     Table left;
     Table right;
@@ -38,6 +47,14 @@ public class NodeComponent extends DraggableTable {
         this.title = node.title;
         pinComponentList = new ArrayList<>();
         defaultBG = getBackground();
+        try {
+            bodyPatch = new SwingNinePatch(ImageIO.read(getClass().getResourceAsStream("icons/nodeBody.9.png")));
+            titlePatch = new SwingNinePatch(ImageIO.read(getClass().getResourceAsStream("icons/nodeTitle.9.png")));
+            titleGlossPatch = new SwingNinePatch(ImageIO.read(getClass().getResourceAsStream("icons/nodeTitleGloss.9.png")));
+            titleHighlightPatch = new SwingNinePatch(ImageIO.read(getClass().getResourceAsStream("icons/nodeTitleHighlight.9.png")));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         init();
     }
 
@@ -76,7 +93,6 @@ public class NodeComponent extends DraggableTable {
         addPins();
 
         setSize(400, 400);
-        setBorder(BorderFactory.createLineBorder(Color.BLACK));
 
         addMouseMotionListener(new MouseAdapter() {
 
@@ -126,10 +142,12 @@ public class NodeComponent extends DraggableTable {
                 if(SceneGraphForm.instance.isAltPressed && e.getClickCount() >= 2) {
                     node.remove();
                     e.consume();
-                }else propagateEvent(e);
+                }else {
+                    new NodeSelectedEvent(node).fire();
+                    propagateEvent(e);
+                }
             }
         });
-
 
         root.addCell(title).colspan(3).padRight(10).padBottom(4).row();
         root.addCell(left).left().padBottom(4);
@@ -196,8 +214,31 @@ public class NodeComponent extends DraggableTable {
     }
 
     @Override
-    public void paint(Graphics g) {
-        super.paint(g);
+    protected void paintComponent(Graphics g) {
+//        super.paintComponent(g);
+        if(g instanceof Graphics2D) {
+            Graphics2D g2d = (Graphics2D) g;
+            g2d.setRenderingHint(RenderingHints.KEY_DITHERING, RenderingHints.VALUE_DITHER_ENABLE);
+            if(bodyPatch != null) {
+                int rule = AlphaComposite.SRC_OVER;
+                Composite comp = AlphaComposite.getInstance(rule, 0.99f);
+                g2d.setComposite(comp);
+                bodyPatch.drawNinePatch(g2d, 0, 0, getWidth(), getHeight());
+                g2d.setComposite(AlphaComposite.getInstance(rule, 1f));
+            }
+            if(titlePatch != null)
+                titlePatch.drawNinePatch(g2d, 1, 1, getWidth()-2, getHeaderBottom());
+//            if(titleGlossPatch != null)
+//                titleGlossPatch.drawNinePatch(g2d, 0, 0, getWidth(), left.getY());
+            if(titleHighlightPatch != null)
+                titleHighlightPatch.drawNinePatch(g2d, 0, 0, getWidth(), getHeight());
+        }
+    }
+
+    public int getHeaderBottom() {
+        int l = left.getY();
+        int r = right.getY();
+        return l < r ? l : r;
     }
 
     public static NodeWrapper create(Node node) {

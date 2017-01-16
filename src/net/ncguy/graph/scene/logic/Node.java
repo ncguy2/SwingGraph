@@ -1,5 +1,7 @@
 package net.ncguy.graph.scene.logic;
 
+import net.ncguy.graph.runtime.api.IRuntimeCore;
+
 import java.awt.geom.Point2D;
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +10,7 @@ import java.util.Optional;
 /**
  * Created by Guy on 14/01/2017.
  */
-public class Node {
+public abstract class Node {
 
     public String title;
     public Point2D.Float location;
@@ -49,4 +51,7 @@ public class Node {
         pinList.forEach(Pin::clear);
         return this;
     }
+
+    public abstract IRuntimeCore runtime();
+
 }

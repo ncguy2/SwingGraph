@@ -73,7 +73,7 @@ public class SceneGraphRenderer extends PCanvas implements PinConnectEvent.PinCo
         getRoot().addChild(edgeLayer);
         getRoot().addChild(wireLayer);
         getCamera().addLayer(0, edgeLayer);
-        getCamera().addLayer(wireLayer);
+        getCamera().addLayer(1, wireLayer);
 
         PInputEventListener[] listeners = getCamera().getInputEventListeners();
         for (PInputEventListener listener : listeners)

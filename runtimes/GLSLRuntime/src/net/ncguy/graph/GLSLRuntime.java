@@ -14,6 +14,12 @@ import net.ncguy.graph.runtime.api.RuntimeMeta;
 @RuntimeMeta(name = "GLSL", type = RuntimeType.RUNTIME)
 public class GLSLRuntime implements IRuntimeCore {
 
+    public static GLSLRuntime newestInstance;
+
+    public GLSLRuntime() {
+        newestInstance = this;
+    }
+
     GLSLLibrary library;
     GLSLCompiler compiler;
 
