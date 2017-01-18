@@ -30,5 +30,6 @@
     </orderEntry>
     <orderEntry type="library" exported="" name="org.reflections:reflections:0.9.10" level="application" />
     <orderEntry type="library" name="com.github.freeseawind:NinePatch-Swing:1.0" level="application" />
+    <orderEntry type="library" name="com.esotericsoftware:kryonet:2.22.0-RC1" level="application" />
   </component>
 </module>

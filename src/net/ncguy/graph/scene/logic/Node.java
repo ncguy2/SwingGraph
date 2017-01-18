@@ -12,6 +12,7 @@ import java.util.Optional;
  */
 public abstract class Node {
 
+    public String uuid;
     public String title;
     public Point2D.Float location;
     public SceneGraph sceneGraph;
