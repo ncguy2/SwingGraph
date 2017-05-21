@@ -1,5 +1,6 @@
 package net.ncguy.graph.library.factories;
 
+import net.ncguy.graph.data.MutableProperty;
 import net.ncguy.graph.library.GLSLFactory;
 import net.ncguy.graph.library.GLSLNode;
 import net.ncguy.graph.library.GLSLNodeFactory;
@@ -7,6 +8,7 @@ import net.ncguy.graph.scene.logic.Node;
 import net.ncguy.graph.scene.logic.Pin;
 import net.ncguy.graph.scene.logic.SceneGraph;
 
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -19,12 +21,16 @@ public class MakeVec2Node extends GLSLNode {
         addPin(new Pin(this, "X", true));
         addPin(new Pin(this, "Y", true));
         addPin(new Pin(this, "Vec2", false));
+
+        defaultX = new MutableProperty<>("Default X", 0.f);
+        defaultY = new MutableProperty<>("Default Y", 0.f);
     }
 
     static int globalId;
 
     int id;
     boolean fragmentUsed;
+    MutableProperty<Float> defaultX, defaultY;
 
     @Override
     public String getUniforms() {
@@ -45,8 +51,8 @@ public class MakeVec2Node extends GLSLNode {
         Optional<Pin> pinX = getPinFromIndex(0, true);
         Optional<Pin> pinY = getPinFromIndex(1, true);
 
-        String xS = "0.0";
-        String yS = "0.0";
+        String xS = defaultX.get().toString();
+        String yS = defaultY.get().toString();
         String pre = "";
         Pin p;
         Node node;
@@ -67,7 +73,7 @@ public class MakeVec2Node extends GLSLNode {
             }
         }
 
-        return String.format("%s%s = vec2(%s, %s);", pre, getVariable(), xS, yS);
+        return String.format("%s%s = vec2(%s, %s);\n", pre, getVariable(), xS, yS);
     }
 
     @Override
@@ -79,6 +85,13 @@ public class MakeVec2Node extends GLSLNode {
     public void resetCache() {
         id = globalId++;
         fragmentUsed = false;
+    }
+
+    @Override
+    public void GetMutableProperties(List<MutableProperty> list) {
+        super.GetMutableProperties(list);
+        list.add(defaultX);
+        list.add(defaultY);
     }
 
     @GLSLFactory(displayName = "Make Vector 2", category = "GLSL/data")

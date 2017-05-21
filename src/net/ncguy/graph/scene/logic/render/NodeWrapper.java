@@ -120,11 +120,12 @@ public class NodeWrapper extends PSwing {
     @Override
     public void setPaint(Paint newPaint) {
         super.setPaint(newPaint);
-        if(newPaint instanceof Color) {
-            if(newPaint.equals(Color.WHITE))
-                this.nodeComponent.resetBackground();
-            else this.nodeComponent.setBackground((Color) newPaint);
-        }
+//        if(newPaint instanceof Color) {
+//            if(newPaint.equals(Color.WHITE))
+//                this.nodeComponent.resetBackground();
+//            else this.nodeComponent.setBackground((Color) newPaint);
+//        }
+
     }
 
     public Color getTrueBackground() {

@@ -2,6 +2,7 @@ package net.ncguy.graph.scene.logic.render.listener;
 
 import aurelienribon.tweenengine.Tween;
 import net.ncguy.graph.scene.logic.render.NodeWrapper;
+import net.ncguy.graph.scene.logic.render.SceneGraphRenderer;
 import net.ncguy.graph.scene.render.SceneGraphForm;
 import org.piccolo2d.PNode;
 import org.piccolo2d.event.PDragEventHandler;
@@ -85,8 +86,11 @@ public class GraphDragEventHandler extends PDragEventHandler {
             PPath edge = (PPath) edges.get(i);
             if(edge.getAttribute("type", "edge") == "wire")
                 updateWire.accept(edge);
-            else
-                update.accept(edge);
+            else if(edge.getAttribute("type", "edge") == "wire_free") {
+                SceneGraphRenderer.FreeWire wire = (SceneGraphRenderer.FreeWire) edge.getAttribute("wire");
+                wire.terminus.setLocation(event.getPosition().getX(), event.getPosition().getY());
+                updateWire.accept(edge);
+            }else update.accept(edge);
         }
     }
 

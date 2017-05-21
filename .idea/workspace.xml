@@ -2,23 +2,70 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
+      <artifact name="Functions:jar" />
+      <artifact name="HueRuntime:jar" />
+      <artifact name="SwingGraph:jar" />
       <artifact name="TestRuntime:jar" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f3dcf25-e93d-4a91-a45e-2c1d8a29ba0a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/net/ncguy/graph/io/KryoGraphSerializer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/net/ncguy/graph/io/KryoIOHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/net/ncguy/graph/net/NetworkClient.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/net/ncguy/graph/net/NetworkManager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/net/ncguy/graph/net/NetworkServer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/net/ncguy/graph/net/event/NetEvent.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/net/ncguy/graph/net/event/NetEventMeta.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/net/ncguy/graph/net/event/NetOrigin.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/net/ncguy/graph/net/event/NetSide.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/net/ncguy/graph/data/icons/icons/info_white@x4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/Functions_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/HueRuntime_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/AudioRuntime/AudioRuntime.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/AudioRuntime/src/net/ncguy/graph/AudioRuntime.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/AudioRuntime/src/net/ncguy/graph/library/AudioFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/AudioRuntime/src/net/ncguy/graph/library/AudioLibrary.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/AudioRuntime/src/net/ncguy/graph/library/AudioNode.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/AudioRuntime/src/net/ncguy/graph/library/AudioNodeFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/AudioRuntime/src/net/ncguy/graph/library/factories/PlayAudioNode.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/Functions/Functions.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/Functions/src/net/ncguy/graph/functions/FunctionsRuntime.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/Functions/src/net/ncguy/graph/functions/library/FunctionsLibrary.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/Functions/src/net/ncguy/graph/functions/library/factories/IntProviderNode.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/Functions/src/net/ncguy/graph/functions/library/factories/LongProviderNode.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/Functions/src/net/ncguy/graph/functions/library/factories/MethodNode.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/HueRuntime/HueRuntime.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/HueRuntime/src/net/ncguy/graph/runtimes/hue/HueRuntime.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/HueRuntime/src/net/ncguy/graph/runtimes/hue/compiler/HueCompiler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/HueRuntime/src/net/ncguy/graph/runtimes/hue/compiler/InstructionHueCompiler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/HueRuntime/src/net/ncguy/graph/runtimes/hue/library/HueLibrary.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/HueRuntime/src/net/ncguy/graph/runtimes/hue/library/factories/DelayNode.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/HueRuntime/src/net/ncguy/graph/runtimes/hue/library/factories/SendInstructionsNode.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/net/ncguy/graph/data/DefaultNodeFactories.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/net/ncguy/graph/data/MutableProperty.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/net/ncguy/graph/data/MutablePropertyControlRegistry.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/net/ncguy/graph/data/factories/ExecForNode.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/net/ncguy/graph/data/factories/StartExecNode.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/net/ncguy/graph/event/ExecNodeProcessedEvent.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/net/ncguy/graph/io/DBGraphSerializer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/net/ncguy/graph/scene/logic/ExecNode.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/net/ncguy/graph/scene/logic/render/DebugRenderer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/net/ncguy/graph/tween/JComponentTweenAccessor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SwingGraph.iml" afterPath="$PROJECT_DIR$/SwingGraph.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtimes/GLSLRuntime/src/net/ncguy/graph/compiler/GLSLCompiler.java" afterPath="$PROJECT_DIR$/runtimes/GLSLRuntime/src/net/ncguy/graph/compiler/GLSLCompiler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtimes/GLSLRuntime/src/net/ncguy/graph/library/GLSLLibrary.java" afterPath="$PROJECT_DIR$/runtimes/GLSLRuntime/src/net/ncguy/graph/library/GLSLLibrary.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtimes/GLSLRuntime/src/net/ncguy/graph/library/GLSLNode.java" afterPath="$PROJECT_DIR$/runtimes/GLSLRuntime/src/net/ncguy/graph/library/GLSLNode.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtimes/GLSLRuntime/src/net/ncguy/graph/library/factories/GLSLRootNode.java" afterPath="$PROJECT_DIR$/runtimes/GLSLRuntime/src/net/ncguy/graph/library/factories/GLSLRootNode.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtimes/GLSLRuntime/src/net/ncguy/graph/library/factories/MakeVec2Node.java" afterPath="$PROJECT_DIR$/runtimes/GLSLRuntime/src/net/ncguy/graph/library/factories/MakeVec2Node.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/net/ncguy/graph/Main.java" afterPath="$PROJECT_DIR$/src/net/ncguy/graph/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/net/ncguy/graph/contextmenu/ContextMenuForm.java" afterPath="$PROJECT_DIR$/src/net/ncguy/graph/contextmenu/ContextMenuForm.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/net/ncguy/graph/data/icons/Icons.java" afterPath="$PROJECT_DIR$/src/net/ncguy/graph/data/icons/Icons.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/net/ncguy/graph/runtime/api/IRuntimeLibrary.java" afterPath="$PROJECT_DIR$/src/net/ncguy/graph/runtime/api/IRuntimeLibrary.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/net/ncguy/graph/scene/components/graph/NodeConfigurationPanel.java" afterPath="$PROJECT_DIR$/src/net/ncguy/graph/scene/components/graph/NodeConfigurationPanel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/net/ncguy/graph/scene/logic/Node.java" afterPath="$PROJECT_DIR$/src/net/ncguy/graph/scene/logic/Node.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/net/ncguy/graph/scene/logic/Pin.java" afterPath="$PROJECT_DIR$/src/net/ncguy/graph/scene/logic/Pin.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/net/ncguy/graph/scene/logic/render/NodeComponent.java" afterPath="$PROJECT_DIR$/src/net/ncguy/graph/scene/logic/render/NodeComponent.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/net/ncguy/graph/scene/logic/render/NodeWrapper.java" afterPath="$PROJECT_DIR$/src/net/ncguy/graph/scene/logic/render/NodeWrapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/net/ncguy/graph/scene/logic/render/PinComponent.java" afterPath="$PROJECT_DIR$/src/net/ncguy/graph/scene/logic/render/PinComponent.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/net/ncguy/graph/scene/logic/render/SceneGraphRenderer.java" afterPath="$PROJECT_DIR$/src/net/ncguy/graph/scene/logic/render/SceneGraphRenderer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/net/ncguy/graph/scene/logic/render/listener/GraphDragEventHandler.java" afterPath="$PROJECT_DIR$/src/net/ncguy/graph/scene/logic/render/listener/GraphDragEventHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/net/ncguy/graph/scene/render/SceneGraphForm.java" afterPath="$PROJECT_DIR$/src/net/ncguy/graph/scene/render/SceneGraphForm.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/net/ncguy/graph/tween/PNodeTweenAccessor.java" afterPath="$PROJECT_DIR$/src/net/ncguy/graph/tween/PNodeTweenAccessor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/net/ncguy/graph/utils/SwingUtils.java" afterPath="$PROJECT_DIR$/src/net/ncguy/graph/utils/SwingUtils.java" />
     </list>
     <ignored path="SwingGraph.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,110 +87,124 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="NetworkManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/net/NetworkManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="16">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Node.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/scene/logic/Node.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state relative-caret-position="85">
+              <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KryoIOHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/io/KryoIOHandler.java">
+      <file leaf-file-name="SceneGraphRenderer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/scene/logic/render/SceneGraphRenderer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+            <state relative-caret-position="193">
+              <caret line="530" column="38" lean-forward="false" selection-start-line="530" selection-start-column="38" selection-end-line="530" selection-end-column="38" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#19023#19024#0" expanded="true" />
+                <element signature="e#19070#19071#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KryoGraphSerializer.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/io/KryoGraphSerializer.java">
+      <file leaf-file-name="DebugRenderer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/scene/logic/render/DebugRenderer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="742">
-              <caret line="80" column="114" lean-forward="false" selection-start-line="80" selection-start-column="114" selection-end-line="80" selection-end-column="114" />
+            <state relative-caret-position="425">
+              <caret line="49" column="67" lean-forward="false" selection-start-line="49" selection-start-column="67" selection-end-line="49" selection-end-column="67" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#780#781#0" expanded="true" />
+                <element signature="e#815#816#0" expanded="true" />
+                <element signature="e#870#871#0" expanded="true" />
+                <element signature="e#918#919#0" expanded="true" />
+                <element signature="e#953#954#0" expanded="true" />
+                <element signature="e#985#986#0" expanded="true" />
+                <element signature="e#1034#1035#0" expanded="true" />
+                <element signature="e#1076#1077#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Output.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.ideaLibSources/kryo-2.24.0-sources.jar!/com/esotericsoftware/kryo/io/Output.java">
+      <file leaf-file-name="Tween.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/lib/tween-engine-api.jar!/aurelienribon/tweenengine/Tween.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="382" column="16" lean-forward="false" selection-start-line="382" selection-start-column="16" selection-end-line="382" selection-end-column="16" />
+            <state relative-caret-position="182">
+              <caret line="71" column="43" lean-forward="false" selection-start-line="71" selection-start-column="43" selection-end-line="71" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Pin.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Pin.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/scene/logic/Pin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state relative-caret-position="136">
+              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OutputStream.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_66/src.zip!/java/io/OutputStream.java">
+      <file leaf-file-name="JComponentTweenAccessor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/tween/JComponentTweenAccessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="73" column="16" lean-forward="false" selection-start-line="73" selection-start-column="16" selection-end-line="73" selection-end-column="16" />
+            <state relative-caret-position="459">
+              <caret line="51" column="39" lean-forward="false" selection-start-line="51" selection-start-column="39" selection-end-line="51" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NodeComponent.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/scene/logic/render/NodeComponent.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="174">
+              <caret line="41" column="23" lean-forward="false" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NetworkServer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/net/NetworkServer.java">
+      <file leaf-file-name="PinComponent.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/scene/logic/render/PinComponent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="27" column="4" lean-forward="false" selection-start-line="27" selection-start-column="4" selection-end-line="29" selection-end-column="5" />
+            <state relative-caret-position="217">
+              <caret line="197" column="16" lean-forward="false" selection-start-line="197" selection-start-column="16" selection-end-line="197" selection-end-column="16" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#495#496#0" expanded="true" />
-                <element signature="e#532#533#0" expanded="true" />
-                <element signature="e#561#562#0" expanded="true" />
-                <element signature="e#600#601#0" expanded="true" />
+                <element signature="class#2330:3751" expanded="false" />
+                <element signature="e#6024#6025#0" expanded="true" />
+                <element signature="e#6062#6063#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NetEvent.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/net/event/NetEvent.java">
+      <file leaf-file-name="NodeWrapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/scene/logic/render/NodeWrapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="26" column="53" lean-forward="false" selection-start-line="26" selection-start-column="53" selection-end-line="26" selection-end-column="53" />
+            <state relative-caret-position="302">
+              <caret line="127" column="0" lean-forward="true" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#289#290#0" expanded="true" />
-                <element signature="e#325#326#0" expanded="true" />
-                <element signature="e#536#537#0" expanded="true" />
-                <element signature="e#598#599#0" expanded="true" />
+                <element signature="e#4136#4137#0" expanded="true" />
+                <element signature="e#4182#4183#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PNode.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/piccolo2d/piccolo2d-core/3.0/piccolo2d-core-3.0-sources.jar!/org/piccolo2d/PNode.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="2569" column="47" lean-forward="true" selection-start-line="2569" selection-start-column="47" selection-end-line="2569" selection-end-column="47" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -154,8 +215,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="AnnotationType" />
         <option value="Enum" />
+        <option value="AnnotationType" />
         <option value="Class" />
       </list>
     </option>
@@ -175,6 +236,17 @@
       <find>curve</find>
       <find>PinDisconnectEvent</find>
       <find>height</find>
+      <find>PinDrop</find>
+      <find>wire</find>
+      <find>updateWire</find>
+      <find>&quot;nodes&quot;</find>
+      <find>System,.</find>
+      <find>lerp</find>
+      <find>compilerList</find>
+      <find>repaint</find>
+      <find>Tween</find>
+      <find>Twee</find>
+      <find>Tween.to</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -188,57 +260,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/net/ncguy/graph/contextmenu/HideableTreeModel.java" />
-        <option value="$PROJECT_DIR$/src/net/ncguy/graph/contextmenu/Test.java" />
-        <option value="$PROJECT_DIR$/src/net/ncguy/graph/contextmenu/InvisibleNodeTreeExample.java" />
-        <option value="$PROJECT_DIR$/src/net/ncguy/graph/contextmenu/ContextMenuForm.form" />
-        <option value="$PROJECT_DIR$/src/net/ncguy/graph/scene/logic/Pin.java" />
-        <option value="$PROJECT_DIR$/../SwingGraph_Runtimes/GLSLRuntime/src/net/ncguy/graph/library/GLSLNode.java" />
-        <option value="$PROJECT_DIR$/src/net/ncguy/graph/scene/logic/factory/NodeFactory.java" />
-        <option value="$PROJECT_DIR$/../SwingGraph_Runtimes/GLSLRuntime/src/net/ncguy/graph/library/factories/MakeVec2Node.java" />
-        <option value="$PROJECT_DIR$/src/net/ncguy/graph/scene/logic/render/NodeWrapper.java" />
-        <option value="$PROJECT_DIR$/src/net/ncguy/graph/contextmenu/ContextMenuForm.java" />
-        <option value="$PROJECT_DIR$/../SwingGraph_Runtimes/GLSLRuntime/src/net/ncguy/graph/library/factories/TextureCoordsNode.java" />
-        <option value="$PROJECT_DIR$/../SwingGraph_Runtimes/GLSLRuntime/src/net/ncguy/graph/library/factories/TextureSampleNode.java" />
-        <option value="$PROJECT_DIR$/../SwingGraph_Runtimes/GLSLRuntime/src/net/ncguy/graph/library/factories/GLSLRootNode.java" />
-        <option value="$PROJECT_DIR$/../SwingGraph_Runtimes/GLSLRuntime/src/net/ncguy/graph/compiler/GLSLCompiler.java" />
-        <option value="$PROJECT_DIR$/src/net/ncguy/graph/scene/logic/render/SceneGraphRenderer.java" />
+        <option value="$PROJECT_DIR$/runtimes/GLSLRuntime/src/net/ncguy/graph/compiler/GLSLCompiler.java" />
+        <option value="$PROJECT_DIR$/runtimes/GLSLRuntime/src/net/ncguy/graph/library/factories/GLSLRootNode.java" />
+        <option value="$PROJECT_DIR$/src/net/ncguy/graph/scene/logic/PinDropEvent.java" />
+        <option value="$PROJECT_DIR$/src/net/ncguy/graph/scene/logic/render/listener/GraphDragEventHandler.java" />
         <option value="$PROJECT_DIR$/src/net/ncguy/graph/scene/logic/render/PinComponent.java" />
-        <option value="$PROJECT_DIR$/src/net/ncguy/graph/contextmenu/adasdsa.java" />
-        <option value="$PROJECT_DIR$/src/net/ncguy/graph/utils/ComponentResizer.java" />
-        <option value="$PROJECT_DIR$/src/net/ncguy/graph/scene/components/DockableTabbedPane.java" />
-        <option value="$PROJECT_DIR$/src/net/ncguy/graph/scene/components/DraggableTabbedPane.java" />
-        <option value="$PROJECT_DIR$/src/net/ncguy/graph/scene/components/GraphConfigurationPanel.java" />
-        <option value="$PROJECT_DIR$/src/net/ncguy/graph/scene/components/graph/GraphConfiguration.java" />
-        <option value="$PROJECT_DIR$/src/net/ncguy/graph/scene/components/graph/GraphConfigurationPane.java" />
-        <option value="$PROJECT_DIR$/src/net/ncguy/graph/scene/components/graph/GraphConfigurationPanel.java" />
-        <option value="$PROJECT_DIR$/runtimes/GLSLRuntime/src/net/ncguy/graph/library/factories/TextureSampleNode.java" />
-        <option value="$PROJECT_DIR$/runtimes/GLSLRuntime/src/net/ncguy/graph/GLSLRuntime.java" />
-        <option value="$PROJECT_DIR$/runtimes/GLSLRuntime/src/net/ncguy/graph/library/GLSLNode.java" />
-        <option value="$PROJECT_DIR$/src/net/ncguy/graph/scene/logic/render/NodeComponent.java" />
-        <option value="$PROJECT_DIR$/src/net/ncguy/graph/scene/events/NodeSelectedEvent.java" />
-        <option value="$PROJECT_DIR$/runtimes/GLSLRuntime/src/net/ncguy/graph/library/factories/GetVariableNode.java" />
-        <option value="$PROJECT_DIR$/runtimes/GLSLRuntime/src/net/ncguy/graph/library/factories/SetVariableNode.java" />
-        <option value="$PROJECT_DIR$/src/net/ncguy/graph/runtime/api/IRuntimeLibrary.java" />
+        <option value="$PROJECT_DIR$/runtimes/AudioRuntime/src/net/ncguy/graph/library/AudioLibrary.java" />
         <option value="$PROJECT_DIR$/runtimes/GLSLRuntime/src/net/ncguy/graph/library/GLSLLibrary.java" />
-        <option value="$PROJECT_DIR$/src/net/ncguy/graph/scene/components/RootConfigurationPanel.java" />
-        <option value="$PROJECT_DIR$/src/net/ncguy/graph/scene/render/SceneGraphForm.java" />
+        <option value="$PROJECT_DIR$/runtimes/AudioRuntime/src/net/ncguy/graph/library/Audionode.java" />
+        <option value="$PROJECT_DIR$/runtimes/AudioRuntime/src/net/ncguy/graph/AudioRuntime.java" />
+        <option value="$PROJECT_DIR$/runtimes/AudioRuntime/src/net/ncguy/graph/library/AudioFactory.java" />
+        <option value="$PROJECT_DIR$/runtimes/GLSLRuntime/src/net/ncguy/graph/library/GLSLNodeFactory.java" />
+        <option value="$PROJECT_DIR$/runtimes/AudioRuntime/src/net/ncguy/graph/library/AudioNodeFactory.java" />
+        <option value="$PROJECT_DIR$/runtimes/AudioRuntime/src/net/ncguy/graph/library/AudioNode.java" />
+        <option value="$PROJECT_DIR$/runtimes/AudioRuntime/src/net/ncguy/graph/library/factories/PlayAudioNode.java" />
+        <option value="$PROJECT_DIR$/runtimes/GLSLRuntime/src/net/ncguy/graph/library/GLSLNode.java" />
+        <option value="$PROJECT_DIR$/runtimes/HueRuntime/src/net/ncguy/graph/runtimes/hue/library/factories/SendInstructionsFactory.java" />
+        <option value="$PROJECT_DIR$/src/net/ncguy/graph/data/MutableProperty.java" />
+        <option value="$PROJECT_DIR$/src/net/ncguy/graph/utils/SwingUtils.java" />
+        <option value="$PROJECT_DIR$/runtimes/Functions/src/net/ncguy/graph/functions/FunctionsRuntime.java" />
+        <option value="$PROJECT_DIR$/runtimes/Functions/src/net/ncguy/graph/functions/library/factories/MethodNode.java" />
+        <option value="$PROJECT_DIR$/src/net/ncguy/graph/runtime/api/IRuntimeLibrary.java" />
+        <option value="$PROJECT_DIR$/src/net/ncguy/graph/contextmenu/ContextMenuForm.java" />
         <option value="$PROJECT_DIR$/src/net/ncguy/graph/scene/components/graph/NodeConfigurationPanel.java" />
-        <option value="$PROJECT_DIR$/src/net/ncguy/graph/net/event/MovementEvent.java" />
-        <option value="$PROJECT_DIR$/src/net/ncguy/graph/net/event/NodeMoveEvent.java" />
-        <option value="$PROJECT_DIR$/src/net/ncguy/graph/net/event/NetOrigins.java" />
-        <option value="$PROJECT_DIR$/src/net/ncguy/graph/net/event/NetOrigin.java" />
-        <option value="$PROJECT_DIR$/src/net/ncguy/graph/net/event/NetSide.java" />
-        <option value="$PROJECT_DIR$/src/net/ncguy/graph/net/event/NetEventMeta.java" />
-        <option value="$PROJECT_DIR$/src/net/ncguy/graph/net/NetworkServer.java" />
-        <option value="$PROJECT_DIR$/src/net/ncguy/graph/net/NetworkClient.java" />
-        <option value="$PROJECT_DIR$/src/net/ncguy/graph/net/NetworkManager.java" />
-        <option value="$PROJECT_DIR$/src/net/ncguy/graph/net/event/NetEvent.java" />
+        <option value="$PROJECT_DIR$/runtimes/HueRuntime/src/net/ncguy/graph/runtimes/hue/compiler/LEcagyHueCompiler.java" />
+        <option value="$PROJECT_DIR$/runtimes/HueRuntime/src/net/ncguy/graph/runtimes/hue/compiler/LegacyHueCompiler.java" />
+        <option value="$PROJECT_DIR$/runtimes/HueRuntime/src/net/ncguy/graph/runtimes/hue/HueRuntime.java" />
+        <option value="$PROJECT_DIR$/runtimes/HueRuntime/src/net/ncguy/graph/runtimes/hue/compiler/InstructionHueCompiler.java" />
+        <option value="$PROJECT_DIR$/runtimes/HueRuntime/src/net/ncguy/graph/runtimes/hue/library/factories/SendInstructionsNode.java" />
+        <option value="$PROJECT_DIR$/src/net/ncguy/graph/data/factories/StartExecNode.java" />
+        <option value="$PROJECT_DIR$/runtimes/HueRuntime/src/net/ncguy/graph/runtimes/hue/library/HueLibrary.java" />
+        <option value="$PROJECT_DIR$/src/net/ncguy/graph/data/MutablePropertyControlRegistry.java" />
+        <option value="$PROJECT_DIR$/runtimes/HueRuntime/src/net/ncguy/graph/runtimes/hue/library/factories/DelayNode.java" />
+        <option value="$PROJECT_DIR$/src/net/ncguy/graph/scene/render/SceneGraphForm.java" />
+        <option value="$PROJECT_DIR$/runtimes/Functions/src/net/ncguy/graph/functions/library/factories/LongProviderNode.java" />
+        <option value="$PROJECT_DIR$/runtimes/Functions/src/net/ncguy/graph/functions/library/FunctionsLibrary.java" />
+        <option value="$PROJECT_DIR$/src/net/ncguy/graph/data/icons/Icons.java" />
+        <option value="$PROJECT_DIR$/runtimes/HueRuntime/src/net/ncguy/graph/runtimes/hue/compiler/HueCompiler.java" />
+        <option value="$PROJECT_DIR$/runtimes/Functions/src/net/ncguy/graph/functions/library/factories/IntProviderNode.java" />
         <option value="$PROJECT_DIR$/src/net/ncguy/graph/scene/logic/Node.java" />
-        <option value="$PROJECT_DIR$/src/net/ncguy/graph/io/KryoIOHandler.java" />
-        <option value="$PROJECT_DIR$/src/net/ncguy/graph/io/KryoPinSerializer.java" />
-        <option value="$PROJECT_DIR$/src/net/ncguy/graph/io/KryoNodeSerializer.java" />
-        <option value="$PROJECT_DIR$/src/net/ncguy/graph/io/KryoGraphSerializer.java" />
+        <option value="$PROJECT_DIR$/src/net/ncguy/graph/data/DefaultNodeFactories.java" />
+        <option value="$PROJECT_DIR$/src/net/ncguy/graph/data/factories/ExecForNode.java" />
+        <option value="$PROJECT_DIR$/src/net/ncguy/graph/event/DebugExecNodeProcessedEvent.java" />
+        <option value="$PROJECT_DIR$/src/net/ncguy/graph/event/ExecNodeProcessedEvent.java" />
+        <option value="$PROJECT_DIR$/src/net/ncguy/graph/scene/logic/render/SceneGraphRenderer.java" />
+        <option value="$PROJECT_DIR$/src/net/ncguy/graph/scene/logic/ExecNode.java" />
+        <option value="$PROJECT_DIR$/src/net/ncguy/graph/tween/PNodeTweenAccessor.java" />
+        <option value="$PROJECT_DIR$/src/net/ncguy/graph/scene/logic/render/NodeComponent.java" />
+        <option value="$PROJECT_DIR$/src/net/ncguy/graph/Main.java" />
+        <option value="$PROJECT_DIR$/src/net/ncguy/graph/scene/logic/render/DebugRenderer.java" />
+        <option value="$PROJECT_DIR$/src/net/ncguy/graph/tween/JComponentTweenAccessor.java" />
+        <option value="$PROJECT_DIR$/src/net/ncguy/graph/scene/logic/render/NodeWrapper.java" />
       </list>
     </option>
   </component>
@@ -271,134 +343,276 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SwingGraph" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SwingGraph" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SwingGraph" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SwingGraph" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SwingGraph" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="graph" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SwingGraph" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SwingGraph" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="graph" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SwingGraph" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SwingGraph" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SwingGraph" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SwingGraph" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="runtimes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
+          <expand>
+            <path>
+              <item name="SwingGraph" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SwingGraph" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SwingGraph" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SwingGraph" type="462c0819:PsiDirectoryNode" />
+              <item name="plugins" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SwingGraph" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SwingGraph" type="462c0819:PsiDirectoryNode" />
+              <item name="runtimes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SwingGraph" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SwingGraph" type="462c0819:PsiDirectoryNode" />
+              <item name="runtimes" type="462c0819:PsiDirectoryNode" />
+              <item name="Functions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SwingGraph" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SwingGraph" type="462c0819:PsiDirectoryNode" />
+              <item name="runtimes" type="462c0819:PsiDirectoryNode" />
+              <item name="Functions" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SwingGraph" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SwingGraph" type="462c0819:PsiDirectoryNode" />
+              <item name="runtimes" type="462c0819:PsiDirectoryNode" />
+              <item name="Functions" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="functions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SwingGraph" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SwingGraph" type="462c0819:PsiDirectoryNode" />
+              <item name="runtimes" type="462c0819:PsiDirectoryNode" />
+              <item name="Functions" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="functions" type="462c0819:PsiDirectoryNode" />
+              <item name="library" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SwingGraph" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SwingGraph" type="462c0819:PsiDirectoryNode" />
+              <item name="runtimes" type="462c0819:PsiDirectoryNode" />
+              <item name="Functions" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="functions" type="462c0819:PsiDirectoryNode" />
+              <item name="library" type="462c0819:PsiDirectoryNode" />
+              <item name="factories" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SwingGraph" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SwingGraph" type="462c0819:PsiDirectoryNode" />
+              <item name="runtimes" type="462c0819:PsiDirectoryNode" />
+              <item name="HueRuntime" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SwingGraph" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SwingGraph" type="462c0819:PsiDirectoryNode" />
+              <item name="runtimes" type="462c0819:PsiDirectoryNode" />
+              <item name="HueRuntime" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SwingGraph" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SwingGraph" type="462c0819:PsiDirectoryNode" />
+              <item name="runtimes" type="462c0819:PsiDirectoryNode" />
+              <item name="HueRuntime" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="hue" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SwingGraph" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SwingGraph" type="462c0819:PsiDirectoryNode" />
+              <item name="runtimes" type="462c0819:PsiDirectoryNode" />
+              <item name="HueRuntime" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="hue" type="462c0819:PsiDirectoryNode" />
+              <item name="compiler" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SwingGraph" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SwingGraph" type="462c0819:PsiDirectoryNode" />
+              <item name="runtimes" type="462c0819:PsiDirectoryNode" />
+              <item name="HueRuntime" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="hue" type="462c0819:PsiDirectoryNode" />
+              <item name="library" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SwingGraph" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SwingGraph" type="462c0819:PsiDirectoryNode" />
+              <item name="runtimes" type="462c0819:PsiDirectoryNode" />
+              <item name="HueRuntime" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="hue" type="462c0819:PsiDirectoryNode" />
+              <item name="library" type="462c0819:PsiDirectoryNode" />
+              <item name="factories" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SwingGraph" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SwingGraph" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SwingGraph" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SwingGraph" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="graph" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SwingGraph" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SwingGraph" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="graph" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SwingGraph" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SwingGraph" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="graph" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="factories" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SwingGraph" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SwingGraph" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="graph" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="icons" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SwingGraph" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SwingGraph" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="graph" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="icons" type="462c0819:PsiDirectoryNode" />
+              <item name="icons" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SwingGraph" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SwingGraph" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="graph" type="462c0819:PsiDirectoryNode" />
+              <item name="event" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SwingGraph" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SwingGraph" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="graph" type="462c0819:PsiDirectoryNode" />
+              <item name="scene" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SwingGraph" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SwingGraph" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="graph" type="462c0819:PsiDirectoryNode" />
+              <item name="scene" type="462c0819:PsiDirectoryNode" />
+              <item name="logic" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SwingGraph" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SwingGraph" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="graph" type="462c0819:PsiDirectoryNode" />
+              <item name="scene" type="462c0819:PsiDirectoryNode" />
+              <item name="logic" type="462c0819:PsiDirectoryNode" />
+              <item name="render" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SwingGraph" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SwingGraph" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="graph" type="462c0819:PsiDirectoryNode" />
+              <item name="scene" type="462c0819:PsiDirectoryNode" />
+              <item name="render" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SwingGraph" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SwingGraph" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="graph" type="462c0819:PsiDirectoryNode" />
+              <item name="scene" type="462c0819:PsiDirectoryNode" />
+              <item name="RuntimeController" type="e9f4de52:FormNode" />
+            </path>
+            <path>
+              <item name="SwingGraph" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SwingGraph" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="graph" type="462c0819:PsiDirectoryNode" />
+              <item name="tween" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SwingGraph" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SwingGraph" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="graph" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files (x86)\nodejs\node.exe" />
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH" value="370" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/runtimes/GLSLRuntime/GLSLRuntime.iml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/runtimes" />
     <property name="nodejs_interpreter_path" value="C:/Program Files (x86)/nodejs/node" />
     <property name="js.eslint.eslintPackage" value="" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.10253906" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="true" />
     <property name="Repository.Attach.Sources" value="true" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
-    <property name="SearchEverywhereHistoryKey" value="Node&#9;FILE&#9;file://J:/Development/Repositories/SwingGraph/src/net/ncguy/graph/scene/logic/Node.java&#10;NodeCompo&#9;FILE&#9;file://J:/Development/Repositories/SwingGraph/src/net/ncguy/graph/scene/logic/render/NodeComponent.java&#10;ILib&#9;PSI&#9;JAVA://net.ncguy.graph.runtime.api.IRuntimeLibrary&#10;ImagePa&#9;FILE&#9;file://J:/Development/Repositories/SwingGraph/src/net/ncguy/graph/scene/components/ImagePanel.java&#10;SceneGra&#9;PSI&#9;JAVA://net.ncguy.graph.scene.logic.render.SceneGraphRenderer&#10;TextureCoor&#9;FILE&#9;file://J:/Development/Repositories/SwingGraph_Runtimes/GLSLRuntime/src/net/ncguy/graph/library/factories/TextureCoordsNode.java&#10;NodeCom&#9;FILE&#9;file://J:/Development/Repositories/SwingGraph/src/net/ncguy/graph/scene/logic/render/NodeComponent.java&#10;Context&#9;FILE&#9;file://J:/Development/Repositories/SwingGraph/src/net/ncguy/graph/contextmenu/ContextMenuForm.java&#10;AnimatedP&#9;FILE&#9;jar://J:/Development/Repositories/SwingGraph/lib/javapng-2.0-src.jar!/javapng-2.0/src/apng/com/sixlegs/png/AnimatedPngImage.java&#10;NodeC&#9;FILE&#9;file://J:/Development/Repositories/SwingGraph/src/net/ncguy/graph/scene/logic/render/NodeComponent.java&#10;PNode&#9;FILE&#9;file://J:/Development/Repositories/SwingGraph/src/net/ncguy/graph/tween/PNodeTweenAccessor.java&#10;NodeWra&#9;FILE&#9;file://J:/Development/Repositories/SwingGraph/src/net/ncguy/graph/scene/logic/render/NodeWrapper.java&#10;Pin&#9;FILE&#9;file://J:/Development/Repositories/SwingGraph/src/net/ncguy/graph/scene/logic/Pin.java&#10;NodeTw&#9;PSI&#9;JAVA://net.ncguy.graph.tween.PNodeTweenAccessor&#10;JTextField&#9;PSI&#9;JAVA://javax.swing.JTextField&#10;StringSele&#9;PSI&#9;JAVA://java.awt.datatransfer.StringSelection&#10;Even&#9;FILE&#9;file://J:/Development/Repositories/SwingGraph/src/net/ncguy/graph/event/EventBus.java&#10;EventB&#9;FILE&#9;file://J:/Development/Repositories/SwingGraph/src/net/ncguy/graph/event/EventBus.java&#10;PZoomEve&#9;PSI&#9;JAVA://org.piccolo2d.event.PZoomEventHandler" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="SearchEverywhereHistoryKey" value="Node&#9;FILE&#9;file://J:/Development/Repositories/SwingGraph/src/net/ncguy/graph/scene/logic/Node.java&#10;NodeWra&#9;FILE&#9;file://J:/Development/Repositories/SwingGraph/src/net/ncguy/graph/scene/logic/render/NodeWrapper.java&#10;NodeC&#9;FILE&#9;file://J:/Development/Repositories/SwingGraph/src/net/ncguy/graph/scene/logic/render/NodeComponent.java&#10;PNo&#9;FILE&#9;file://J:/Development/Repositories/SwingGraph/src/net/ncguy/graph/tween/PNodeTweenAccessor.java&#10;Int&#9;FILE&#9;file://J:/Development/Repositories/SwingGraph/runtimes/Functions/src/net/ncguy/graph/functions/library/factories/IntProviderNode.java&#10;Method&#9;FILE&#9;file://J:/Development/Repositories/SwingGraph/runtimes/Functions/src/net/ncguy/graph/functions/library/factories/MethodNode.java&#10;Defa&#9;FILE&#9;file://J:/Development/Repositories/SwingGraph/src/net/ncguy/graph/data/DefaultNodeFactories.java&#10;Glsl&#9;FILE&#9;file://J:/Development/Repositories/SwingGraph/runtimes/GLSLRuntime/src/net/ncguy/graph/compiler/GLSLCompiler.java&#10;HueCom&#9;FILE&#9;file://J:/Development/Repositories/SwingGraph/runtimes/HueRuntime/src/net/ncguy/graph/runtimes/hue/compiler/HueCompiler.java&#10;Load&#9;PSI&#9;JAVA://net.ncguy.graph.io.DBGraphSerializer#load&#10;PinC&#9;FILE&#9;file://J:/Development/Repositories/SwingGraph/src/net/ncguy/graph/scene/logic/render/PinComponent.java&#10;Function&#9;FILE&#9;file://J:/Development/Repositories/SwingGraph/runtimes/Functions/src/net/ncguy/graph/functions/library/FunctionsLibrary.java&#10;LibrarySt&#9;PSI&#9;JAVA://net.ncguy.graph.runtime.LibraryStateChangeEvent&#10;NodeCon&#9;FILE&#9;file://J:/Development/Repositories/SwingGraph/src/net/ncguy/graph/scene/components/graph/NodeConfigurationPanel.java&#10;Pincom&#9;FILE&#9;file://J:/Development/Repositories/SwingGraph/src/net/ncguy/graph/scene/logic/render/PinComponent.java&#10;PinDrop&#9;PSI&#9;JAVA://net.ncguy.graph.scene.logic.PinDropEvent&#10;RuntimeMa&#9;PSI&#9;JAVA://com.sun.xml.internal.bind.v2.model.runtime.RuntimeMapPropertyInfo&#10;Runtime&#9;FILE&#9;file://J:/Development/Repositories/SwingGraph/src/net/ncguy/graph/runtime/api/IRuntimeLibrary.java&#10;Sceneg&#9;FILE&#9;file://J:/Development/Repositories/SwingGraph/src/net/ncguy/graph/scene/render/SceneGraphForm.java&#10;NodeCompo&#9;FILE&#9;file://J:/Development/Repositories/SwingGraph/src/net/ncguy/graph/scene/logic/render/NodeComponent.java&#10;ILib&#9;PSI&#9;JAVA://net.ncguy.graph.runtime.api.IRuntimeLibrary&#10;ImagePa&#9;FILE&#9;file://J:/Development/Repositories/SwingGraph/src/net/ncguy/graph/scene/components/ImagePanel.java&#10;SceneGra&#9;PSI&#9;JAVA://net.ncguy.graph.scene.logic.render.SceneGraphRenderer&#10;TextureCoor&#9;FILE&#9;file://J:/Development/Repositories/SwingGraph_Runtimes/GLSLRuntime/src/net/ncguy/graph/library/factories/TextureCoordsNode.java&#10;NodeCom&#9;FILE&#9;file://J:/Development/Repositories/SwingGraph/src/net/ncguy/graph/scene/logic/render/NodeComponent.java&#10;Context&#9;FILE&#9;file://J:/Development/Repositories/SwingGraph/src/net/ncguy/graph/contextmenu/ContextMenuForm.java&#10;AnimatedP&#9;FILE&#9;jar://J:/Development/Repositories/SwingGraph/lib/javapng-2.0-src.jar!/javapng-2.0/src/apng/com/sixlegs/png/AnimatedPngImage.java&#10;PNode&#9;FILE&#9;file://J:/Development/Repositories/SwingGraph/src/net/ncguy/graph/tween/PNodeTweenAccessor.java&#10;Pin&#9;FILE&#9;file://J:/Development/Repositories/SwingGraph/src/net/ncguy/graph/scene/logic/Pin.java&#10;NodeTw&#9;PSI&#9;JAVA://net.ncguy.graph.tween.PNodeTweenAccessor&#10;JTextField&#9;PSI&#9;JAVA://javax.swing.JTextField&#10;StringSele&#9;PSI&#9;JAVA://java.awt.datatransfer.StringSelection&#10;Even&#9;FILE&#9;file://J:/Development/Repositories/SwingGraph/src/net/ncguy/graph/event/EventBus.java&#10;EventB&#9;FILE&#9;file://J:/Development/Repositories/SwingGraph/src/net/ncguy/graph/event/EventBus.java&#10;PZoomEve&#9;PSI&#9;JAVA://org.piccolo2d.event.PZoomEventHandler" />
     <property name="ignore_missing_gitignore" value="true" />
+    <property name="node.js.path.for.package.jscs" value="project" />
+    <property name="node.js.selected.package.jscs" value="" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.standard" value="" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="J:\Development\Repositories\SwingGraph\src\net\ncguy\graph\data\icons\icons" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="net.ncguy.graph.library.factories" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="J:\Development\Repositories\SwingGraph\src\net\ncguy\graph\scene\logic\render\icons" />
       <recent name="J:\Development\Repositories\SwingGraph\out\production\SwingGraph" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="net.ncguy.graph.functions.library.factories" />
+      <recent name="net.ncguy.graph.runtimes.hue.compiler" />
+      <recent name="net.ncguy.graph.library.factories" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="J:\Development\Repositories\SwingGraph\src\net\ncguy\graph\data\icons\icons" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager" selected="Application.Main">
-    <configuration default="false" name="InvisibleNodeTreeExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="InvisibleNodeTreeExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="net.ncguy.graph.contextmenu.InvisibleNodeTreeExample" />
       <option name="VM_PARAMETERS" />
@@ -411,7 +625,22 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="SwingGraph" />
       <envs />
-      <method />
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" singleton="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="net.ncguy.graph.Main" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="SwingGraph" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -426,23 +655,18 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
-      <method />
     </configuration>
-    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list />
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <method />
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -463,12 +687,6 @@
       </option>
       <envs />
       <patterns />
-      <method />
-    </configuration>
-    <configuration default="true" type="JarApplication" factoryName="JAR Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <envs />
-      <method />
     </configuration>
     <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -484,6 +702,26 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
+    </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
       <method />
     </configuration>
     <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
@@ -499,43 +737,11 @@
     <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
       <method />
     </configuration>
-    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
       <command value="run" />
       <scripts />
       <node-interpreter value="project" />
       <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="Main" type="Application" factoryName="Application" singleton="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="net.ncguy.graph.Main" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="SwingGraph" />
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
     <list size="2">
@@ -577,36 +783,37 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3281412" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328125" sideWeight="0.49224806" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40520832" sideWeight="0.52196383" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20111288" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="92" y="92" width="2376" height="896" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.46834627" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17607313" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Memory View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run with VisualVM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1836248" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Tail" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40520832" sideWeight="0.47803617" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug with VisualVM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Memory View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="LuaJ" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Tail" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21391486" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20111288" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="92" y="92" width="2376" height="896" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917964" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run with VisualVM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Runtime Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917964" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="CSS-X-Fire" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug with VisualVM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="processedProjectFiles" value="true" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -624,7 +831,8 @@
     <MESSAGE value="Too many changes to list" />
     <MESSAGE value="Lots more changes, commit of sample GLSL runtime which currently supports texture sampling using TexCoordinates piped from the vertex shader" />
     <MESSAGE value="Added support for node-specific settings" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added support for node-specific settings" />
+    <MESSAGE value="Started work on IO" />
+    <option name="LAST_COMMIT_MESSAGE" value="Started work on IO" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -641,475 +849,492 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="187" />
+      <option name="time" value="243" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/scene/components/ImagePanel.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_66/src.zip!/java/util/Map.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="26" column="5" lean-forward="false" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_66/src.zip!/java/awt/RenderingHints.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3562">
-          <caret line="310" column="28" lean-forward="false" selection-start-line="310" selection-start-column="28" selection-end-line="310" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/contextmenu/adasdsa.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_66/src.zip!/javax/swing/JSplitPane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="868" column="16" lean-forward="false" selection-start-line="868" selection-start-column="16" selection-end-line="868" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_66/src.zip!/javax/swing/plaf/SplitPaneUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="56" column="65" lean-forward="true" selection-start-line="56" selection-start-column="65" selection-end-line="56" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_66/src.zip!/javax/swing/JTabbedPane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="840" column="0" lean-forward="true" selection-start-line="840" selection-start-column="0" selection-end-line="840" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_66/src.zip!/javax/swing/JButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-262">
-          <caret line="131" column="11" lean-forward="false" selection-start-line="131" selection-start-column="11" selection-end-line="131" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_66/src.zip!/java/awt/FontMetrics.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="634" column="35" lean-forward="false" selection-start-line="634" selection-start-column="29" selection-end-line="634" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/scene/logic/render/PinComponent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="144" column="9" lean-forward="true" selection-start-line="144" selection-start-column="9" selection-end-line="144" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/utils/ComponentResizer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="226" column="73" lean-forward="true" selection-start-line="226" selection-start-column="73" selection-end-line="226" selection-end-column="73" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#605#623#0" expanded="false" />
-            <element signature="e#1733#1734#0" expanded="false" />
-            <element signature="e#1798#1799#0" expanded="false" />
-            <element signature="e#2160#2161#0" expanded="false" />
-            <element signature="e#2237#2238#0" expanded="false" />
-            <element signature="e#3539#3540#0" expanded="false" />
-            <element signature="e#3572#3573#0" expanded="false" />
-            <element signature="e#4315#4316#0" expanded="false" />
-            <element signature="e#4349#4350#0" expanded="false" />
-            <element signature="e#4621#4622#0" expanded="false" />
-            <element signature="e#4667#4668#0" expanded="false" />
-            <element signature="e#4809#4810#0" expanded="false" />
-            <element signature="e#4843#4844#0" expanded="false" />
-            <element signature="e#6120#6121#0" expanded="false" />
-            <element signature="e#6151#6152#0" expanded="false" />
-            <element signature="e#6557#6558#0" expanded="false" />
-            <element signature="e#6597#6598#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/scene/components/DraggableTabbedPane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="72" column="47" lean-forward="true" selection-start-line="72" selection-start-column="47" selection-end-line="72" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#572#2022#0" expanded="false" />
-            <element signature="e#2021#2022#0" expanded="false" />
-            <element signature="e#2050#2718#0" expanded="false" />
-            <element signature="e#2717#2718#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/scene/components/DockableTabbedPane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/scene/components/graph/GraphConfigurationPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="13" column="51" lean-forward="false" selection-start-line="13" selection-start-column="51" selection-end-line="13" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#300#301#0" expanded="false" />
-            <element signature="e#334#335#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/runtimes/GLSLRuntime/src/net/ncguy/graph/library/factories/TextureSampleNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="14" column="41" lean-forward="false" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
+        <state relative-caret-position="488">
+          <caret line="268" column="44" lean-forward="true" selection-start-line="268" selection-start-column="40" selection-end-line="268" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/scene/logic/render/NodeComponent.java">
+    <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/scene/components/graph/NodeConfigurationPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        <state relative-caret-position="376">
+          <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/scene/events/NodeSelectedEvent.java">
+    <entry file="file://$PROJECT_DIR$/runtimes/HueRuntime/src/net/ncguy/graph/runtimes/hue/HueRuntime.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="13" column="32" lean-forward="false" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+        <state relative-caret-position="272">
+          <caret line="18" column="4" lean-forward="false" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#365#366#0" expanded="false" />
-            <element signature="e#397#398#0" expanded="false" />
-            <element signature="e#426#427#0" expanded="false" />
-            <element signature="e#453#454#0" expanded="false" />
-            <element signature="e#491#492#0" expanded="false" />
-            <element signature="e#523#524#0" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/runtimes/GLSLRuntime/src/net/ncguy/graph/GLSLRuntime.java">
+    <entry file="file://$PROJECT_DIR$/runtimes/HueRuntime/src/net/ncguy/graph/runtimes/hue/compiler/InstructionHueCompiler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="19" column="30" lean-forward="false" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+        <state relative-caret-position="-781">
+          <caret line="13" column="16" lean-forward="false" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
           <folding>
-            <element signature="e#584#585#0" expanded="false" />
-            <element signature="e#621#622#0" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/runtimes/GLSLRuntime/src/net/ncguy/graph/library/GLSLNode.java">
+    <entry file="file://$PROJECT_DIR$/runtimes/HueRuntime/src/net/ncguy/graph/runtimes/hue/library/factories/SendInstructionsNode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+        <state relative-caret-position="409">
+          <caret line="84" column="43" lean-forward="true" selection-start-line="84" selection-start-column="43" selection-end-line="84" selection-end-column="43" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#910#911#0" expanded="false" />
-            <element signature="e#959#960#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#3234#3235#0" expanded="true" />
+            <element signature="e#3296#3297#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/runtimes/GLSLRuntime/src/net/ncguy/graph/library/GLSLNodeFactory.java">
+    <entry file="file://$PROJECT_DIR$/runtimes/HueRuntime/src/net/ncguy/graph/runtimes/hue/library/HueLibrary.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="7" column="22" lean-forward="false" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+        <state relative-caret-position="272">
+          <caret line="33" column="19" lean-forward="false" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/runtimes/GLSLRuntime/src/net/ncguy/graph/library/factories/GLSLRootNode.java">
+    <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/data/MutablePropertyControlRegistry.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        <state relative-caret-position="153">
+          <caret line="72" column="43" lean-forward="true" selection-start-line="72" selection-start-column="43" selection-end-line="72" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/runtimes/GLSLRuntime/src/net/ncguy/graph/library/factories/GetVariableNode.java" />
-    <entry file="file://$PROJECT_DIR$/runtimes/GLSLRuntime/src/net/ncguy/graph/library/factories/SetVariableNode.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_66/src.zip!/javax/swing/JComponent.java">
+    <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/scene/SceneConfigForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="4836" column="16" lean-forward="false" selection-start-line="4836" selection-start-column="16" selection-end-line="4836" selection-end-column="16" />
+        <state relative-caret-position="68">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../libs/TableLayout/tablelayout/tablelayout-swing/src/com/esotericsoftware/tablelayout/swing/Table.java">
+    <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/scene/RuntimeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="63" column="16" lean-forward="false" selection-start-line="63" selection-start-column="16" selection-end-line="63" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_66/src.zip!/java/awt/Component.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="2038" column="0" lean-forward="false" selection-start-line="2038" selection-start-column="0" selection-end-line="2038" selection-end-column="0" />
+        <state relative-caret-position="-6">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/runtime/api/IRuntimeLibrary.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_66/src.zip!/javax/swing/JMenuItem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="15" column="17" lean-forward="false" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        <state relative-caret-position="-175">
+          <caret line="108" column="11" lean-forward="false" selection-start-line="108" selection-start-column="11" selection-end-line="108" selection-end-column="11" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#381#382#0" expanded="false" />
-            <element signature="e#408#409#0" expanded="false" />
+            <element signature="e#3251#3252#0" expanded="true" />
+            <element signature="e#3289#3290#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/runtimes/GLSLRuntime/src/net/ncguy/graph/library/factories/MakeVec2Node.java">
+    <entry file="file://$PROJECT_DIR$/runtimes/Functions/src/net/ncguy/graph/functions/library/factories/LongProviderNode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="51" column="18" lean-forward="false" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/runtimes/GLSLRuntime/src/net/ncguy/graph/library/GLSLLibrary.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="33" column="20" lean-forward="false" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../libs/TableLayout/tablelayout/tablelayout-swing/src/com/esotericsoftware/tablelayout/swing/TableLayout.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
+        <state relative-caret-position="187">
           <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/scene/components/RootConfigurationPanel.java">
+    <entry file="file://$PROJECT_DIR$/runtimes/Functions/src/net/ncguy/graph/functions/library/FunctionsLibrary.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="19" column="30" lean-forward="false" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+        <state relative-caret-position="374">
+          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/data/icons/icons/tick_white@x4.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/data/icons/icons/warning_white@x4.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/io/DBGraphSerializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="133" column="20" lean-forward="true" selection-start-line="133" selection-start-column="20" selection-end-line="133" selection-end-column="20" />
+          <folding>
+            <element signature="e#4933#4934#0" expanded="true" />
+            <element signature="e#4960#4961#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/scene/render/SceneGraphForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1904">
-          <caret line="145" column="27" lean-forward="false" selection-start-line="145" selection-start-column="27" selection-end-line="145" selection-end-column="27" />
+        <state relative-caret-position="238">
+          <caret line="135" column="58" lean-forward="false" selection-start-line="135" selection-start-column="58" selection-end-line="135" selection-end-column="58" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="e#4350#4351#0" expanded="true" />
+            <element signature="e#4417#4418#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_66/src.zip!/javax/swing/JScrollPane.java">
+    <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/event/ToastEvent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4176">
-          <caret line="301" column="34" lean-forward="false" selection-start-line="301" selection-start-column="34" selection-end-line="301" selection-end-column="34" />
-          <folding>
-            <element signature="e#10946#10947#0" expanded="false" />
-            <element signature="e#11034#11035#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/scene/components/graph/NodeConfigurationPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/esotericsoftware/kryonet/2.22.0-RC1/kryonet-2.22.0-RC1-sources.jar!/com/esotericsoftware/kryonet/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="380" column="16" lean-forward="false" selection-start-line="380" selection-start-column="16" selection-end-line="380" selection-end-column="16" />
-          <folding>
-            <element signature="e#14096#14097#0" expanded="false" />
-            <element signature="e#14137#14138#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shader.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+        <state relative-caret-position="170">
+          <caret line="10" column="18" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/net/event/NetOrigin.java">
+    <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/data/icons/Icons.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/net/event/NetEventMeta.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" column="24" lean-forward="false" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+        <state relative-caret-position="511">
+          <caret line="38" column="1" lean-forward="true" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="e#792#793#0" expanded="true" />
+            <element signature="e#843#844#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/net/event/NetSide.java">
+    <entry file="file://$PROJECT_DIR$/runtimes/GLSLRuntime/src/net/ncguy/graph/compiler/GLSLCompiler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" column="5" lean-forward="false" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+        <state relative-caret-position="238">
+          <caret line="29" column="46" lean-forward="true" selection-start-line="29" selection-start-column="46" selection-end-line="29" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/esotericsoftware/kryonet/2.22.0-RC1/kryonet-2.22.0-RC1-sources.jar!/com/esotericsoftware/kryonet/Client.java">
+    <entry file="file://$PROJECT_DIR$/runtimes/HueRuntime/src/net/ncguy/graph/runtimes/hue/library/factories/DelayNode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="30" column="13" lean-forward="false" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/net/NetworkClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="19" column="22" lean-forward="false" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#469#470#0" expanded="false" />
-            <element signature="e#506#507#0" expanded="false" />
-            <element signature="e#535#536#0" expanded="false" />
-            <element signature="e#574#575#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/net/NetworkServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="27" column="4" lean-forward="false" selection-start-line="27" selection-start-column="4" selection-end-line="29" selection-end-column="5" />
+        <state relative-caret-position="358">
+          <caret line="37" column="31" lean-forward="false" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#495#496#0" expanded="true" />
-            <element signature="e#532#533#0" expanded="true" />
-            <element signature="e#561#562#0" expanded="true" />
-            <element signature="e#600#601#0" expanded="true" />
+            <element signature="e#1096#1097#0" expanded="true" />
+            <element signature="e#1141#1142#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/net/event/NetEvent.java">
+    <entry file="file://$PROJECT_DIR$/runtimes/Functions/src/net/ncguy/graph/functions/library/factories/IntProviderNode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="26" column="53" lean-forward="false" selection-start-line="26" selection-start-column="53" selection-end-line="26" selection-end-column="53" />
+        <state relative-caret-position="68">
+          <caret line="12" column="40" lean-forward="false" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runtimes/Functions/src/net/ncguy/graph/functions/library/factories/MethodNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="41" column="37" lean-forward="true" selection-start-line="41" selection-start-column="37" selection-end-line="41" selection-end-column="37" />
+          <folding>
+            <element signature="e#2080#2081#0" expanded="true" />
+            <element signature="e#2158#2159#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runtimes/HueRuntime/src/net/ncguy/graph/runtimes/hue/compiler/HueCompiler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="29" column="16" lean-forward="false" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+          <folding>
+            <element signature="e#1131#1132#0" expanded="true" />
+            <element signature="e#1191#1192#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/event/SwitchRuntimeEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/event/ExecNodeProcessedEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="63" lean-forward="false" selection-start-line="25" selection-start-column="63" selection-end-line="25" selection-end-column="63" />
+          <folding>
+            <element signature="e#248#249#0" expanded="true" />
+            <element signature="e#280#281#0" expanded="true" />
+            <element signature="e#309#310#0" expanded="true" />
+            <element signature="e#336#337#0" expanded="true" />
+            <element signature="e#374#375#0" expanded="true" />
+            <element signature="e#406#407#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/data/factories/StartExecNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="21" column="10" lean-forward="false" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#289#290#0" expanded="true" />
-            <element signature="e#325#326#0" expanded="true" />
-            <element signature="e#536#537#0" expanded="true" />
-            <element signature="e#598#599#0" expanded="true" />
+            <element signature="e#921#922#0" expanded="true" />
+            <element signature="e#972#973#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/net/NetworkManager.java">
+    <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/data/DefaultNodeFactories.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        <state relative-caret-position="306">
+          <caret line="18" column="37" lean-forward="false" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_66/src.zip!/java/lang/Integer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="49" column="16" lean-forward="true" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/scene/ToastForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/data/factories/ExecForNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="35" column="22" lean-forward="true" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1498#1499#0" expanded="true" />
+            <element signature="e#1554#1555#0" expanded="true" />
+            <element signature="e#1605#1606#0" expanded="true" />
+            <element signature="e#1632#1633#0" expanded="true" />
+            <element signature="e#1729#1730#0" expanded="true" />
+            <element signature="e#1788#1789#0" expanded="true" />
+            <element signature="e#1857#1858#0" expanded="true" />
+            <element signature="e#1910#1911#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/scene/logic/ExecNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="19" column="18" lean-forward="true" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/piccolo2d/piccolo2d-extras/3.0/piccolo2d-extras-3.0-sources.jar!/org/piccolo2d/extras/pswing/PSwingRepaintManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="156" column="0" lean-forward="false" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/piccolo2d/piccolo2d-core/3.0/piccolo2d-core-3.0-sources.jar!/org/piccolo2d/util/PBounds.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="181" column="0" lean-forward="false" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/piccolo2d/piccolo2d-core/3.0/piccolo2d-core-3.0-sources.jar!/org/piccolo2d/PLayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="202" column="0" lean-forward="false" selection-start-line="202" selection-start-column="0" selection-end-line="202" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/github/freeseawind/NinePatch-Swing/1.0/NinePatch-Swing-1.0-sources.jar!/freeseawind/ninepatch/common/AbstractNinePatch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-532">
+          <caret line="54" column="16" lean-forward="false" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_66/src.zip!/java/awt/Graphics.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="433" column="16" lean-forward="false" selection-start-line="433" selection-start-column="16" selection-end-line="433" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/event/EventBus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="81" column="0" lean-forward="true" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/tween/PNodeTweenAccessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_66/src.zip!/java/awt/Color.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="221" column="18" lean-forward="false" selection-start-line="221" selection-start-column="18" selection-end-line="221" selection-end-column="18" />
+          <folding>
+            <element signature="e#17886#17887#0" expanded="true" />
+            <element signature="e#17932#17933#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/tween-engine-api.jar!/aurelienribon/tweenengine/Tween.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="71" column="43" lean-forward="false" selection-start-line="71" selection-start-column="43" selection-end-line="71" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/scene/logic/render/DebugRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="49" column="67" lean-forward="false" selection-start-line="49" selection-start-column="67" selection-end-line="49" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#780#781#0" expanded="true" />
+            <element signature="e#815#816#0" expanded="true" />
+            <element signature="e#870#871#0" expanded="true" />
+            <element signature="e#918#919#0" expanded="true" />
+            <element signature="e#953#954#0" expanded="true" />
+            <element signature="e#985#986#0" expanded="true" />
+            <element signature="e#1034#1035#0" expanded="true" />
+            <element signature="e#1076#1077#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/tween/JComponentTweenAccessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="51" column="39" lean-forward="false" selection-start-line="51" selection-start-column="39" selection-end-line="51" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/scene/logic/render/SceneGraphRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="530" column="38" lean-forward="false" selection-start-line="530" selection-start-column="38" selection-end-line="530" selection-end-column="38" />
+          <folding>
+            <element signature="e#19023#19024#0" expanded="true" />
+            <element signature="e#19070#19071#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/scene/logic/render/PinComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="197" column="16" lean-forward="false" selection-start-line="197" selection-start-column="16" selection-end-line="197" selection-end-column="16" />
+          <folding>
+            <element signature="class#2330:3751" expanded="false" />
+            <element signature="e#6024#6025#0" expanded="true" />
+            <element signature="e#6062#6063#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/scene/logic/render/NodeComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="41" column="23" lean-forward="false" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/scene/logic/render/NodeWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="127" column="0" lean-forward="true" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
+          <folding>
+            <element signature="e#4136#4137#0" expanded="true" />
+            <element signature="e#4182#4183#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/piccolo2d/piccolo2d-core/3.0/piccolo2d-core-3.0-sources.jar!/org/piccolo2d/PNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="2569" column="47" lean-forward="true" selection-start-line="2569" selection-start-column="47" selection-end-line="2569" selection-end-column="47" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/scene/logic/Node.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/io/KryoIOHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_66/src.zip!/java/io/OutputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="73" column="16" lean-forward="false" selection-start-line="73" selection-start-column="16" selection-end-line="73" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/io/KryoPinSerializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state relative-caret-position="85">
+          <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/scene/logic/Pin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state relative-caret-position="136">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/esotericsoftware/kryo/kryo/2.24.0/kryo-2.24.0.jar!/com/esotericsoftware/kryo/io/Output.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="68" column="16" lean-forward="false" selection-start-line="68" selection-start-column="16" selection-end-line="68" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ideaLibSources/kryo-2.24.0-sources.jar!/com/esotericsoftware/kryo/io/Output.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="382" column="16" lean-forward="false" selection-start-line="382" selection-start-column="16" selection-end-line="382" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/ncguy/graph/io/KryoGraphSerializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="742">
-          <caret line="80" column="114" lean-forward="false" selection-start-line="80" selection-start-column="114" selection-end-line="80" selection-end-column="114" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1119,7 +1344,7 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>TestRuntime:jar</last-edited>
+          <last-edited>SwingGraph:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1144,7 +1369,7 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
-          <last-edited>com.esotericsoftware:kryonet:2.22.0-RC1</last-edited>
+          <last-edited>com.h2database:h2:1.4.193</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1168,12 +1393,11 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>SwingGraph</last-edited>
+          <last-edited>AudioRuntime|runtimes</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

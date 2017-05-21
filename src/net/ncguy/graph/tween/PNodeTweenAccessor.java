@@ -35,8 +35,12 @@ public class PNodeTweenAccessor implements TweenAccessor<PNode> {
     public void setValues(PNode pNode, int i, float[] floats) {
         int index = 0;
         if(isMasked(i, COLOUR)) {
-            Color c = new Color(floats[index++], floats[index++], floats[index++]);
-            pNode.setPaint(c);
+            try {
+                Color c = new Color(floats[index++], floats[index++], floats[index++]);
+                pNode.setPaint(c);
+            }catch (IllegalArgumentException e) {
+                e.printStackTrace();
+            }
         }
         if(isMasked(i, ALPHA)) pNode.setTransparency(floats[index++]);
     }

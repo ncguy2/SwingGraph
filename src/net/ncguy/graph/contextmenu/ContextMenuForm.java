@@ -1,5 +1,6 @@
 package net.ncguy.graph.contextmenu;
 
+import net.ncguy.graph.data.DefaultNodeFactories;
 import net.ncguy.graph.data.tree.*;
 import net.ncguy.graph.event.EventBus;
 import net.ncguy.graph.runtime.LibraryStateChangeEvent;
@@ -48,6 +49,9 @@ public class ContextMenuForm extends JFrame implements LibraryStateChangeEvent.L
         setSize(368, 256);
         HideableTreeModel model = new HideableTreeModel(new HideableTreeNode());
         model.activateFilter(true);
+
+        collectiveNodeFactories.addAll(DefaultNodeFactories.instance().GetFactories());
+
         nodeTree.setModel(model);
 
         nodeTree.setCellRenderer(new DefaultTreeCellRenderer() {
@@ -180,8 +184,10 @@ public class ContextMenuForm extends JFrame implements LibraryStateChangeEvent.L
     }
 
     public void enableLibrary(IRuntimeLibrary lib) {
-        if(lib != null)
+        if(lib != null) {
+            lib.RegisterControlAdapters();
             collectiveNodeFactories.addAll(lib.getNodeFactories());
+        }
         invalidateNodeTree();
     }
 

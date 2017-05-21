@@ -1,14 +1,14 @@
 package net.ncguy.graph.library;
 
-import com.esotericsoftware.tablelayout.swing.Table;
+import net.ncguy.graph.data.MutablePropertyControlRegistry;
 import net.ncguy.graph.library.factories.GLSLRootNode;
 import net.ncguy.graph.library.factories.MakeVec2Node;
 import net.ncguy.graph.library.factories.TextureCoordsNode;
 import net.ncguy.graph.library.factories.TextureSampleNode;
 import net.ncguy.graph.runtime.api.IRuntimeLibrary;
-import net.ncguy.graph.scene.logic.Node;
 import net.ncguy.graph.scene.logic.factory.NodeFactory;
 
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,10 +28,12 @@ public class GLSLLibrary implements IRuntimeLibrary {
     }
 
     @Override
-    public Table getConfigComponent(Node node) {
-        Table t = new Table();
-        t.addCell(node.title).expandX().fillX().row();
-        t.addCell("").expand().fill().row();
-        return t;
+    public void RegisterControlAdapters() {
+        MutablePropertyControlRegistry.instance().RegisterBuilder(GLSLRootNode.GLSLVersions.class, property -> {
+            SpinnerListModel model = new SpinnerListModel(GLSLRootNode.GLSLVersions.values());
+            JSpinner spinner = new JSpinner(model);
+            spinner.addChangeListener(e -> property.set((GLSLRootNode.GLSLVersions) model.getValue()));
+            return spinner;
+        });
     }
 }

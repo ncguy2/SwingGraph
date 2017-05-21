@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/runtimes/GLSLRuntime/GLSLRuntime.iml" filepath="$PROJECT_DIR$/runtimes/GLSLRuntime/GLSLRuntime.iml" />
+      <module fileurl="file://$PROJECT_DIR$/runtimes/AudioRuntime/AudioRuntime.iml" filepath="$PROJECT_DIR$/runtimes/AudioRuntime/AudioRuntime.iml" group="runtimes" />
+      <module fileurl="file://$PROJECT_DIR$/runtimes/Functions/Functions.iml" filepath="$PROJECT_DIR$/runtimes/Functions/Functions.iml" group="runtimes" />
+      <module fileurl="file://$PROJECT_DIR$/runtimes/GLSLRuntime/GLSLRuntime.iml" filepath="$PROJECT_DIR$/runtimes/GLSLRuntime/GLSLRuntime.iml" group="runtimes" />
+      <module fileurl="file://$PROJECT_DIR$/runtimes/HueRuntime/HueRuntime.iml" filepath="$PROJECT_DIR$/runtimes/HueRuntime/HueRuntime.iml" group="runtimes" />
       <module fileurl="file://$PROJECT_DIR$/SwingGraph.iml" filepath="$PROJECT_DIR$/SwingGraph.iml" />
     </modules>
   </component>

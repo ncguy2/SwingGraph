@@ -23,6 +23,10 @@ public class Pin {
         wireColour = Color.BLACK;
     }
 
+    public boolean isConnected() {
+        return connected != null;
+    }
+
     public void clear() {
         if(connected != null)
             disconnectFrom(connected);

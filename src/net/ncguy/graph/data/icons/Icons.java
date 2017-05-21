@@ -19,8 +19,9 @@ public class Icons {
     }
 
     public enum Icon {
-        WARNING_WHITE("icons/warning_white@x4.png"),
+        INFO_WHITE("icons/info_white@x4.png"),
         TICK_WHITE("icons/tick_white@x4.png"),
+        WARNING_WHITE("icons/warning_white@x4.png"),
         ;
         public final String path;
         Icon(String path) {

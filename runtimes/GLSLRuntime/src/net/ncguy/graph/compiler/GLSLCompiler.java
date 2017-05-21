@@ -48,7 +48,7 @@ public class GLSLCompiler implements IRuntimeCompiler<String> {
                 .forEach(node -> fragmentMap.put(node, node.getUniforms()));
 
         StringBuilder fragmentBuilder = new StringBuilder();
-        fragmentBuilder.append("#version 450\n\n");
+        fragmentBuilder.append("#version ").append(rootNode.version.get().toString()).append("\n\n");
 
         /*
         addPin(new Pin(this, "Diffuse", true));

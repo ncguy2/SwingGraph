@@ -14,4 +14,8 @@ public class SwingUtils {
         return new Point(pos.x + parentOff.x, pos.y + parentOff.y);
     }
 
+    public static boolean isMasked(int composite, int mask) {
+        return (composite & mask) != 0;
+    }
+
 }

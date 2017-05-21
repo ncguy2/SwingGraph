@@ -1,10 +1,13 @@
 package net.ncguy.graph.scene.logic.render;
 
+import aurelienribon.tweenengine.Tween;
+import aurelienribon.tweenengine.TweenCallback;
 import net.ncguy.graph.event.EventBus;
 import net.ncguy.graph.event.OpenContextMenuEvent;
 import net.ncguy.graph.scene.logic.*;
 import net.ncguy.graph.scene.logic.render.listener.GraphDragEventHandler;
 import net.ncguy.graph.scene.render.SceneGraphForm;
+import net.ncguy.graph.tween.PNodeTweenAccessor;
 import org.piccolo2d.PCanvas;
 import org.piccolo2d.PLayer;
 import org.piccolo2d.PNode;
@@ -29,7 +32,7 @@ public class SceneGraphRenderer extends PCanvas implements PinConnectEvent.PinCo
         PinDisconnectEvent.PinDisconnectListener {
 
     private Map<Node, NodeWrapper> nodeWrapperMap;
-    private Map<Wire, PPath> wireEdgeMap;
+    public Map<Wire, PPath> wireEdgeMap;
 
     private SceneGraph graph;
 
@@ -44,8 +47,17 @@ public class SceneGraphRenderer extends PCanvas implements PinConnectEvent.PinCo
 
     public float spawnX = 0;
     public float spawnY = 0;
+    public FreeWire freeWire;
+    public PPath freeWire_Edge;
+    public Tween freeWire_Edge_tween;
+    private DebugRenderer debugRenderer;
 
     public SceneGraphRenderer(int width, int height, SceneGraph graph) {
+
+        freeWire = new FreeWire(null, new Point2D.Double());
+        freeWire_Edge = PPath.createLine(0, 0, 0, 0);
+        freeWire_Edge.addAttribute("type", "wire_free");
+        freeWire_Edge.addAttribute("nodes", new ArrayList<>());
 
 
         this.width = width;
@@ -66,33 +78,64 @@ public class SceneGraphRenderer extends PCanvas implements PinConnectEvent.PinCo
 
         nodeLayer.addInputEventListener(new GraphDragEventHandler(this::updateEdge, this::updateWire));
 
-        addInputEventListener(new PBasicInputEventHandler() {
+        PInputEventListener inputEventListener = (new PBasicInputEventHandler() {
+            @Override
+            public void mousePressed(PInputEvent event) {
+                super.mousePressed(event);
+            }
 
+            @Override
+            public void mouseDragged(PInputEvent event) {
+                super.mouseDragged(event);
+                freeWire.terminus.setLocation(event.getPosition().getX(), event.getPosition().getY());
+                updateWire(freeWire, freeWire_Edge);
+            }
+
+            @Override
+            public void mouseEntered(PInputEvent event) {
+                super.mouseEntered(event);
+            }
+
+            @Override
+            public void mouseExited(PInputEvent event) {
+                super.mouseExited(event);
+            }
+
+            @Override
+            public void mouseMoved(PInputEvent event) {
+                super.mouseMoved(event);
+            }
+
+            @Override
+            public void mouseReleased(PInputEvent event) {
+                super.mouseReleased(event);
+            }
+
+            @Override
+            public void mouseClicked(PInputEvent event) {
+                super.mouseClicked(event);
+                if(event.getButton() == MouseEvent.BUTTON3) {
+                    Point2D d = event.getPosition();
+                    spawnX = (float) d.getX();
+                    spawnY = (float) d.getY();
+                }
+            }
         });
+
+        getCamera().addInputEventListener(inputEventListener);
+
 
         getRoot().addChild(edgeLayer);
         getRoot().addChild(wireLayer);
         getCamera().addLayer(0, edgeLayer);
         getCamera().addLayer(1, wireLayer);
 
-        PInputEventListener[] listeners = getCamera().getInputEventListeners();
-        for (PInputEventListener listener : listeners)
-            getCamera().removeInputEventListener(listener);
+//        PInputEventListener[] listeners = getCamera().getInputEventListeners();
+//        for (PInputEventListener listener : listeners)
+//            getCamera().removeInputEventListener(listener);
 
         getCamera().addInputEventListener(new CustomZoomEventHandler());
         getCamera().addInputEventListener(new PPanEventHandler());
-
-        addInputEventListener(new PBasicInputEventHandler() {
-            @Override
-            public void mouseClicked(PInputEvent e) {
-                super.mouseClicked(e);
-                if(e.getButton() == MouseEvent.BUTTON3) {
-                    Point2D d = e.getPosition();
-                    spawnX = (float) d.getX();
-                    spawnY = (float) d.getY();
-                }
-            }
-        });
 
         addKeyListener(new KeyAdapter() {
             @Override
@@ -124,6 +167,8 @@ public class SceneGraphRenderer extends PCanvas implements PinConnectEvent.PinCo
             }
         });
 
+
+        debugRenderer = new DebugRenderer(this);
 //        generateTestNodes();
         graph.addOnAddListener(this::onGraphNodeAdd);
         graph.addOnRemoveListener(this::onGraphNodeRemove);
@@ -298,7 +343,12 @@ public class SceneGraphRenderer extends PCanvas implements PinConnectEvent.PinCo
         }
     }
 
-    private void updateWire(Wire wire, PPath edge) {
+    public void updateWire(Wire wire, PPath edge) {
+        if(wire instanceof FreeWire) {
+            UpdateWire((FreeWire) wire, edge);
+            return;
+        }
+
         PNode node1 = (PNode) ((ArrayList)edge.getAttribute("nodes")).get(0);
         PNode node2 = (PNode) ((ArrayList)edge.getAttribute("nodes")).get(1);
 
@@ -345,6 +395,37 @@ public class SceneGraphRenderer extends PCanvas implements PinConnectEvent.PinCo
 
 
         // Should be positioned on pins by here
+        UpdateWire_impl(start, end, edge);
+    }
+
+    private void UpdateWire(FreeWire wire, PPath edge) {
+        ArrayList nodes = (ArrayList) edge.getAttribute("nodes");
+        if(nodes.size() <= 0) return;
+        PNode node1 = (PNode) nodes.get(0);
+
+        if(!(node1 instanceof NodeWrapper)) return;
+
+        NodeWrapper w1 = (NodeWrapper) node1;
+
+        edge.reset();
+
+        PBounds w1Bounds = w1.getFullBoundsReference();
+
+        Point2D.Double start = (Point2D.Double) w1Bounds.getCenter2D();
+        Point2D.Double end = wire.terminus;
+
+        start.x -= w1Bounds.getWidth()/2;
+        start.y -= w1Bounds.getHeight()/2;
+
+        Point2D.Float pin1 = w1.nodeComponent.getPercentagePositionOfPin(wire.a);
+        pin1.x *= w1Bounds.getWidth();
+        pin1.y *= w1Bounds.getHeight();
+        start.x += pin1.x;
+        start.y += pin1.y;
+        UpdateWire_impl(start, end, edge);
+    }
+
+    private void UpdateWire_impl(Point2D.Double start, Point2D.Double end, PPath edge) {
         edge.moveTo((float) start.getX(), (float) start.getY());
         if(useSpline) {
             Point2D.Double[] ps = new Point2D.Double[]{
@@ -365,7 +446,6 @@ public class SceneGraphRenderer extends PCanvas implements PinConnectEvent.PinCo
         }else {
             edge.lineTo((float) end.getX(), (float) end.getY());
         }
-
     }
 
     public void addNode() {
@@ -439,6 +519,42 @@ public class SceneGraphRenderer extends PCanvas implements PinConnectEvent.PinCo
         wireLayer.removeChild(edge);
     }
 
+    public void SetFreeWire(Pin pin) {
+        NodeWrapper wrapper = getWrapperFromPin(pin);
+        freeWire.a = pin;
+        ((ArrayList) wrapper.getAttribute("edges")).add(freeWire_Edge);
+        ((ArrayList)freeWire_Edge.getAttribute("nodes")).add(wrapper);
+        edgeLayer.addChild(SceneGraphForm.instance.getGraphRenderer().freeWire_Edge);
+
+        if(freeWire_Edge_tween != null && (!freeWire_Edge_tween.isFinished()))
+            freeWire_Edge_tween.kill();
+        freeWire_Edge_tween = Tween.to(freeWire_Edge, PNodeTweenAccessor.ALPHA, .4f).target(1.f).start(SceneGraphForm.instance.tweenManager);
+
+        wireEdgeMap.put(freeWire, freeWire_Edge);
+        updateWire(freeWire, freeWire_Edge);
+    }
+
+    public void RemoveFreeWire(Pin pin) {
+        NodeWrapper wrapper = getWrapperFromPin(pin);
+        freeWire.a = null;
+        ((ArrayList)wrapper.getAttribute("edges")).remove(freeWire_Edge);
+        ((ArrayList)freeWire_Edge.getAttribute("nodes")).remove(wrapper);
+
+        if(freeWire_Edge_tween != null && (!freeWire_Edge_tween.isFinished()))
+            freeWire_Edge_tween.kill();
+        freeWire_Edge_tween = Tween.to(freeWire_Edge, PNodeTweenAccessor.ALPHA, .4f).target(0.f).setCallback((i, baseTween) -> {
+            if(i == TweenCallback.COMPLETE)
+                edgeLayer.removeChild(freeWire_Edge);
+        }).start(SceneGraphForm.instance.tweenManager);
+
+        updateWire(freeWire, freeWire_Edge);
+        wireEdgeMap.remove(freeWire);
+    }
+
+    public NodeWrapper getNodeWrapper(Node node) {
+        return nodeWrapperMap.get(node);
+    }
+
 
     public static class CustomZoomEventHandler extends PZoomEventHandler {
         public CustomZoomEventHandler() {
@@ -475,5 +591,23 @@ public class SceneGraphRenderer extends PCanvas implements PinConnectEvent.PinCo
             return a.hashCode()+b.hashCode();
         }
     }
+
+    public static class FreeWire extends Wire {
+        public Point2D.Double terminus;
+
+        public FreeWire(Pin anchor, Point2D.Double terminus) {
+            super(anchor, null);
+            this.terminus = terminus;
+        }
+
+        @Override
+        public int hashCode() {
+            if(a != null)
+                return a.hashCode()+terminus.hashCode();
+            return new Object().hashCode() + terminus.hashCode();
+        }
+
+    }
+
 
 }

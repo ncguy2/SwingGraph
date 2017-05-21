@@ -92,7 +92,7 @@ public class NodeComponent extends DraggableTable {
 
         addPins();
 
-        setSize(400, 400);
+//        setSize(512, 400);
 
         addMouseMotionListener(new MouseAdapter() {
 
@@ -151,7 +151,7 @@ public class NodeComponent extends DraggableTable {
 
         root.addCell(title).colspan(3).padRight(10).padBottom(4).row();
         root.addCell(left).left().padBottom(4);
-        root.addCell("").padBottom(4);
+        root.addCell("").padBottom(4).width(24);
         root.addCell(right).right().padBottom(4).row();
         defaultBG = getBackground();
     }
@@ -188,9 +188,9 @@ public class NodeComponent extends DraggableTable {
 
             if(pin.onLeft) {
                 t.addCell(comp);
-                t.addCell(pin.label);
+                t.addCell(pin.label).left().padLeft(2);
             }else{
-                t.addCell(pin.label);
+                t.addCell(pin.label).right().padRight(2);
                 t.addCell(comp);
             }
             t.row();
@@ -218,6 +218,8 @@ public class NodeComponent extends DraggableTable {
 //        super.paintComponent(g);
         if(g instanceof Graphics2D) {
             Graphics2D g2d = (Graphics2D) g;
+            g2d.setColor(this.getBackground());
+            g2d.fillRect(0, 0, getWidth(), getHeight());
             g2d.setRenderingHint(RenderingHints.KEY_DITHERING, RenderingHints.VALUE_DITHER_ENABLE);
             if(bodyPatch != null) {
                 int rule = AlphaComposite.SRC_OVER;
@@ -247,6 +249,12 @@ public class NodeComponent extends DraggableTable {
 
     public void resetBackground() {
         setBackground(defaultBG);
+    }
+
+    @Override
+    public void repaint() {
+        super.repaint();
+        requestRepaint();
     }
 
     public void requestRepaint() {

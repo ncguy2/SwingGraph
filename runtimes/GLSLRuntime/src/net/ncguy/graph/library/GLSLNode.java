@@ -38,4 +38,9 @@ public abstract class GLSLNode extends Node {
     public IRuntimeCore runtime() {
         return GLSLRuntime.newestInstance;
     }
+
+    @Override
+    public Object GetValueFromOutputPin(Pin pin) {
+        return null;
+    }
 }

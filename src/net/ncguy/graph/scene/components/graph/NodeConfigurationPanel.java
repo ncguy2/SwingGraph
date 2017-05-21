@@ -45,12 +45,14 @@ public class NodeConfigurationPanel extends JPanel implements NodeSelectedEvent.
 
     @Override
     public void onNodeSelected(NodeSelectedEvent event) {
+        panel.clear();
         Node node = event.node;
         IRuntimeCore runtime = node.runtime();
+        if(runtime == null) return;
         IRuntimeLibrary library = runtime.library();
+        if(library == null) return;
         Table component = library.getConfigComponent(node);
 
-        panel.clear();
         if(component != null)
             panel.addCell(component).expand().fill().row();
 

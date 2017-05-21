@@ -5,7 +5,9 @@ import aurelienribon.tweenengine.TweenManager;
 import net.ncguy.graph.contextmenu.ContextMenuHost;
 import net.ncguy.graph.event.EventBus;
 import net.ncguy.graph.event.ToastEvent;
+import net.ncguy.graph.io.DBGraphSerializer;
 import net.ncguy.graph.runtime.RuntimeReserve;
+import net.ncguy.graph.runtime.api.IRuntimeCore;
 import net.ncguy.graph.scene.RuntimeController;
 import net.ncguy.graph.scene.SceneConfigForm;
 import net.ncguy.graph.scene.ToastForm;
@@ -13,7 +15,7 @@ import net.ncguy.graph.scene.components.graph.GraphConfigurationPanel;
 import net.ncguy.graph.scene.components.graph.NodeConfigurationPanel;
 import net.ncguy.graph.scene.logic.SceneGraph;
 import net.ncguy.graph.scene.logic.render.SceneGraphRenderer;
-import net.ncguy.graph.tween.MutableColour;
+import net.ncguy.graph.tween.JComponentTweenAccessor;
 import net.ncguy.graph.tween.PNodeTweenAccessor;
 import org.piccolo2d.PNode;
 import org.piccolo2d.extras.pswing.PSwingRepaintManager;
@@ -21,7 +23,10 @@ import org.piccolo2d.extras.pswing.PSwingRepaintManager;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.File;
+import java.sql.SQLException;
 import java.util.LinkedHashSet;
+import java.util.Map;
 import java.util.Set;
 
 /**
@@ -102,32 +107,36 @@ public class SceneGraphForm extends JFrame implements ToastEvent.ToastListener {
                 configForm.setVisible(true);
             }
         });
+        fileMenu.addSeparator();
+        fileMenu.add(new AbstractAction("Save") {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    DBGraphSerializer.save(new File("Working/test.db"), graph);
+                } catch (SQLException e1) {
+                    e1.printStackTrace();
+                }
+            }
+        });
 
         JMenu runtimeMenu = new JMenu("Runtimes");
-//        Map<String, IRuntimeCore> coreMap = RuntimeReserve.instance().runtimeMap;
-//        if(coreMap.size() <= 0) {
-//            JMenuItem item = new JMenuItem("No runtimes found");
-//            item.setEnabled(false);
-//            runtimeMenu.add(item);
-//        }else{
-//            coreMap.forEach((s, c) -> {
-//                runtimeMenu.add(new AbstractAction(s) {
-//                    @Override
-//                    public void actionPerformed(ActionEvent e) {
-//                        System.out.printf("Switching to runtime: %s, \n" +
-//                                "\tType: %s\n" +
-//                                "\tHas compiler: %s\n" +
-//                                "\tHas library: %s\n",
-//                                s, c.type(), c.hasCompiler(), c.hasLibrary());
-//                    }
-//                });
-//            });
-//        }
         runtimeMenu.add(new AbstractAction("Configure runtimes") {
             @Override
             public void actionPerformed(ActionEvent e) {
                 RuntimeController.instance().setVisible(true);
             }
+        });
+
+        Map<String, IRuntimeCore> runtimeMap = RuntimeReserve.instance().runtimeMap;
+        JMenu compilerMenu = new JMenu("Compilers");
+        runtimeMap.forEach((s, c) -> {
+            if(!c.hasCompiler()) return;
+            compilerMenu.add(new JMenuItem(new AbstractAction(c.name()) {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    c.compiler().compile(graph);
+                }
+            }));
         });
 
         graph = new SceneGraph();
@@ -137,6 +146,7 @@ public class SceneGraphForm extends JFrame implements ToastEvent.ToastListener {
 
         menuBar.add(fileMenu);
         menuBar.add(runtimeMenu);
+        menuBar.add(compilerMenu);
 
         setJMenuBar(menuBar);
 
@@ -166,8 +176,10 @@ public class SceneGraphForm extends JFrame implements ToastEvent.ToastListener {
             setTitle("Delta: "+delta/1000f);
         });
 
-        Tween.registerAccessor(MutableColour.class, new MutableColour(0));
+//        Tween.registerAccessor(MutableColour.class, new MutableColour(0));
         Tween.registerAccessor(PNode.class, new PNodeTweenAccessor());
+        Tween.registerAccessor(JComponent.class, new JComponentTweenAccessor());
+        Tween.registerAccessor(JPanel.class, new JComponentTweenAccessor());
         Tween.registerAccessor(ToastForm.class, new ToastForm.ToastTweenAccessor());
 
         tweenTimer.setRepeats(true);

@@ -72,6 +72,7 @@ public class PinComponent extends JPanel implements PinDropEvent.PinDropListener
 
         EventBus.instance().register(this);
 
+
         addMouseListener(new MouseAdapter() {
             // Source Drag
             @Override
@@ -86,7 +87,19 @@ public class PinComponent extends JPanel implements PinDropEvent.PinDropListener
                     return;
                 }
                 beginDragged = true;
+
+                SceneGraphForm.instance.getGraphRenderer().SetFreeWire(PinComponent.this.pin);
                 // TODO initiate drag
+            }
+
+            @Override
+            public void mouseMoved(MouseEvent e) {
+                super.mouseMoved(e);
+            }
+
+            @Override
+            public void mouseDragged(MouseEvent e) {
+                super.mouseDragged(e);
             }
 
             // Source drop
@@ -99,6 +112,7 @@ public class PinComponent extends JPanel implements PinDropEvent.PinDropListener
                 beginDragged = false;
                 isHovered = false;
                 // TODO resolve drop
+                SceneGraphForm.instance.getGraphRenderer().RemoveFreeWire(PinComponent.this.pin);
             }
 
             @Override
