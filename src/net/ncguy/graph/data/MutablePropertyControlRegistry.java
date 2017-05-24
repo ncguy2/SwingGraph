@@ -65,21 +65,21 @@ public class MutablePropertyControlRegistry {
             SpinnerNumberModel model = new SpinnerNumberModel();
             model.setValue(property.get());
             JSpinner spinner = new JSpinner(model);
-            spinner.addChangeListener(e -> property.set((Float) model.getValue()));
+            spinner.addChangeListener(e -> model.setValue(property.set((Float) model.getValue())));
             return spinner;
         };
         JComponentBuilder<MutableProperty<Integer>, JSpinner> intBuilder = property -> {
             SpinnerNumberModel model = new SpinnerNumberModel();
             model.setValue(property.get());
             JSpinner spinner = new JSpinner(model);
-            spinner.addChangeListener(e -> property.set((Integer) model.getValue()));
+            spinner.addChangeListener(e -> model.setValue(property.set((Integer) model.getValue())));
             return spinner;
         };
         JComponentBuilder<MutableProperty<Long>, JSpinner> longBuilder = property -> {
             SpinnerNumberModel model = new SpinnerNumberModel();
             model.setValue(property.get());
             JSpinner spinner = new JSpinner(model);
-            spinner.addChangeListener(e -> property.set((Long) model.getValue()));
+            spinner.addChangeListener(e -> model.setValue(property.set((Long) model.getValue())));
             return spinner;
         };
 
@@ -91,7 +91,7 @@ public class MutablePropertyControlRegistry {
         RegisterBuilder(Long.TYPE, longBuilder);
         RegisterBuilder(String.class, property -> {
             JTextField field = new JTextField(property.get());
-            ListenerHelpers.addChangeListener(field, e -> property.set(field.getText()));
+            ListenerHelpers.addChangeListener(field, e -> field.setText(property.set(field.getText())));
             return field;
         });
 
@@ -107,7 +107,7 @@ public class MutablePropertyControlRegistry {
                 Color col = property.get();
                 col = JColorChooser.showDialog(btn, "Choose a colour", col);
                 if(col == null) return;
-                property.set(col);
+                col = property.set(col);
 
                 Tween.to(btn, JComponentTweenAccessor.COLOUR, .4f).target(col.getRed(), col.getGreen(), col.getBlue()).start(SceneGraphForm.instance.tweenManager);
                 Tween.to(bg, JComponentTweenAccessor.COLOUR, .4f).target(col.getRed(), col.getGreen(), col.getBlue()).start(SceneGraphForm.instance.tweenManager);

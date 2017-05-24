@@ -3,6 +3,7 @@ package net.ncguy.graph.runtimes.hue.library;
 import net.ncguy.graph.data.MutablePropertyControlRegistry;
 import net.ncguy.graph.runtime.api.IRuntimeLibrary;
 import net.ncguy.graph.runtimes.hue.library.factories.DelayNode;
+import net.ncguy.graph.runtimes.hue.library.factories.MakeColourNode;
 import net.ncguy.graph.runtimes.hue.library.factories.SendInstructionsNode;
 import net.ncguy.graph.runtimes.hue.library.factories.SendInstructionsNode.Commands;
 import net.ncguy.graph.scene.logic.factory.NodeFactory;
@@ -26,6 +27,7 @@ public class HueLibrary implements IRuntimeLibrary {
         List<NodeFactory> factories = new ArrayList<>();
         factories.add(new SendInstructionsNode.SendInstructionFactory());
         factories.add(new DelayNode.DelayFactory());
+        factories.add(new MakeColourNode.MakeColourFactory());
         return factories;
     }
 
@@ -34,11 +36,9 @@ public class HueLibrary implements IRuntimeLibrary {
         MutablePropertyControlRegistry.instance().RegisterBuilder(Commands.class, property -> {
             JComboBox<Commands> box = new JComboBox<>(Commands.values());
             box.setSelectedIndex(property.get().ordinal());
-            box.addActionListener(e -> property.set((Commands) box.getSelectedItem()));
+            box.addActionListener(e -> box.setSelectedItem(property.set((Commands) box.getSelectedItem())));
             return box;
         });
-
-
         MutablePropertyControlRegistry.instance().RegisterBuilder(InetAddress.class, property -> {
             JFormattedTextField field = new JFormattedTextField(new IPAddressFormatter());
             field.setText(property.get().toString().substring(1));
@@ -46,7 +46,7 @@ public class HueLibrary implements IRuntimeLibrary {
                 @Override
                 public void focusLost(FocusEvent e) {
                     try {
-                        property.set(InetAddress.getByName(field.getText()));
+                        field.setText(property.set(InetAddress.getByName(field.getText())).toString().substring(1));
                     } catch (UnknownHostException e1) {
                         e1.printStackTrace();
                     }
@@ -61,7 +61,7 @@ public class HueLibrary implements IRuntimeLibrary {
                 @Override
                 public void focusLost(FocusEvent e) {
                     try {
-                        property.set((Inet4Address) InetAddress.getByName(field.getText()));
+                        field.setText(property.set((Inet4Address) InetAddress.getByName(field.getText())).toString().substring(1));
                     } catch (UnknownHostException e1) {
                         e1.printStackTrace();
                     }

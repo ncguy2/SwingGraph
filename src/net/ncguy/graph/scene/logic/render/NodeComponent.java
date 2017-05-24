@@ -24,8 +24,8 @@ import java.util.function.Supplier;
 public class NodeComponent extends DraggableTable {
 
     public Node node;
-    public String title;
     public Color defaultBG;
+    JLabel title;
     java.util.List<PinComponent> pinComponentList;
 
     SwingNinePatch bodyPatch;
@@ -44,7 +44,7 @@ public class NodeComponent extends DraggableTable {
     public NodeComponent(Node node) {
         super();
         this.node = node;
-        this.title = node.title;
+        node.renderingComponent = this;
         pinComponentList = new ArrayList<>();
         defaultBG = getBackground();
         try {
@@ -89,6 +89,7 @@ public class NodeComponent extends DraggableTable {
 
         left = new Table();
         right = new Table();
+        title = new JLabel(node.GetTitle());
 
         addPins();
 
@@ -151,7 +152,7 @@ public class NodeComponent extends DraggableTable {
 
         root.addCell(title).colspan(3).padRight(10).padBottom(4).row();
         root.addCell(left).left().padBottom(4);
-        root.addCell("").padBottom(4).width(24);
+        root.addCell("").padBottom(4).width(48);
         root.addCell(right).right().padBottom(4).row();
         defaultBG = getBackground();
     }
@@ -262,4 +263,8 @@ public class NodeComponent extends DraggableTable {
         onRepaintRequest.run();
     }
 
+    public void UpdateTitle() {
+        this.title.setText(this.node.GetTitle());
+        repaint();
+    }
 }

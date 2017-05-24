@@ -2,6 +2,7 @@ package net.ncguy.graph.scene.logic;
 
 import net.ncguy.graph.data.MutableProperty;
 import net.ncguy.graph.runtime.api.IRuntimeCore;
+import net.ncguy.graph.scene.logic.render.NodeComponent;
 
 import java.awt.geom.Point2D;
 import java.util.*;
@@ -13,15 +14,19 @@ public abstract class Node {
 
     public String uuid;
     public String title;
+    public final String baseTitle;
     public Point2D.Float location;
     public SceneGraph sceneGraph;
 
     protected List<Pin> pinList;
     protected Map<Pin, MutableProperty> propertyMap;
 
+    public transient NodeComponent renderingComponent;
+
     public Node(SceneGraph graph, String title) {
         this.sceneGraph = graph;
         this.title = title;
+        this.baseTitle = title;
         location = new Point2D.Float();
         pinList = new ArrayList<>();
         propertyMap = new HashMap<>();
@@ -33,6 +38,18 @@ public abstract class Node {
                 return Optional.of(entry.getKey());
         }
         return Optional.empty();
+    }
+
+    public void SetTitle(String title) {
+        this.title = title;
+    }
+
+    public String GetTitle() {
+        return this.title;
+    }
+
+    public String GetBaseTitle() {
+        return this.baseTitle;
     }
 
     public void addPin(Pin pin) {
@@ -68,6 +85,17 @@ public abstract class Node {
         return this;
     }
 
+    public <T> T GetCastValueFromInputPin(Pin pin, T def) {
+        Object o = GetValueFromInputPin(pin);
+        try{
+            T t = (T) o;
+            return t;
+        }catch (ClassCastException e) {
+            e.printStackTrace();
+        }
+        return def;
+    }
+
     public Object GetValueFromInputPin(Pin pin) {
 
         if(pin.isConnected())
@@ -96,6 +124,11 @@ public abstract class Node {
 
     public abstract IRuntimeCore runtime();
 
+    public List<MutableProperty> GetMutableProperties() {
+        List<MutableProperty> properties = new ArrayList<>();
+        GetMutableProperties(properties);
+        return properties;
+    }
     public void GetMutableProperties(List<MutableProperty> list) {}
 
     public void removePin(Pin pin) {
